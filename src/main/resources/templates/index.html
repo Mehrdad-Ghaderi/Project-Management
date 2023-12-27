@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home page</title>
+</head>
+<body><div data-role="page">
+    <div data-role="header">
+        <h1>Sign Up</h1>
+    </div>
+
+    <div data-role="main" class="ui-content">
+        <form action="/create" method="post" th:object="${formData}">
+            <fieldset data-role="controlgroup">
+                <legend>Enter your information:</legend>
+                <label for="name">Male</label>
+                Full name: <input type="text" id="name" th:field="${formData.fullName}"> <br>
+                <br>
+                <label for="age">Male</label>
+                Age: <input type="text" id="age" th:field="${formData.age}">
+            </fieldset>
+            <fieldset data-role="controlgroup">
+                <legend>Choose your gender:</legend>
+                <label for="male">Male</label>
+                <input type="radio" name="gender" id="male" th:field="${formData.gender}" th:value="Male" checked>
+                <label for="female">Female</label>
+                <input type="radio" name="gender" id="female" th:field="${formData.gender}" th:value="Female">
+            </fieldset>
+
+            <fieldset data-role="controlgroup">
+                <legend>Are you employed:</legend>
+                <label for="yes">Yes</label>
+                <input type="checkbox" name="favcolor" id="yes" th:field="${formData.employed}" th:value="true" checked>
+                <label for="no">No</label>
+                <input type="checkbox" name="favcolor" id="no"  th:field="${formData.employed}" th:value="false">
+            </fieldset>
+            <input type="submit" data-inline="true" value="Submit">
+            <input type="reset" data-inline="true" value="Reset">
+        </form>
+    </div>
+</div>
+
+</body>
+</html>
