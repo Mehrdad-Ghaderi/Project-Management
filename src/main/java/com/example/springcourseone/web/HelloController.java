@@ -35,7 +35,7 @@ public class HelloController {
 
     @RequestMapping(value = "/orders/{id}", method = RequestMethod.GET)
     public String getOrder(@PathVariable String id) {
-        return "Order ID: "  + id;
+        return "Order ID: " + id;
     }
 
 }
