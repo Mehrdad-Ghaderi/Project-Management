@@ -1,15 +1,12 @@
 package com.example.springcourseone.web;
 
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping(value = "/greeting", method = RequestMethod.GET)
 public class HelloController {
 
-    @RequestMapping(value = "/basic", method = RequestMethod.GET)
+    @RequestMapping( "/basic") // when there is only a string, the method is a GET bu default
     public String sayHello() {
         return "<h1>Hello</h1>";
     }
@@ -34,6 +31,11 @@ public class HelloController {
     @RequestMapping(value = "/user_greeting", method = RequestMethod.POST)
     public String printUserGreeting(@RequestParam String firstName, @RequestParam String lastName) {
         return "Hello there, " + firstName + " " + lastName;
+    }
+
+    @RequestMapping(value = "/orders/{id}", method = RequestMethod.GET)
+    public String getOrder(@PathVariable String id) {
+        return "Order ID: " + id;
     }
 
 }
