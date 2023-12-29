@@ -19,7 +19,7 @@ public class ProjectController {
     public String displayProjectForm(Model model) {
 
         model.addAttribute("project", new Project());
-        return "new-project";
+        return "projects/new-project";
     }
 
     @PostMapping("/save")

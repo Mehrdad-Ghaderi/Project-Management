@@ -15,10 +15,10 @@ public class HomeController {
     @Autowired
     ProjectRepository projectRepository;
 
-    @GetMapping("/home")
+    @GetMapping("/")
     public String displayHome(Model model) {
         List<Project> projectList = projectRepository.findAll();
         model.addAttribute("projectList", projectList);
-        return "home";
+        return "main/home";
     }
 }
