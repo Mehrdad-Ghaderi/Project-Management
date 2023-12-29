@@ -1,13 +1,13 @@
-package com.example.springcourseone;
+package com.example.projectmanagement;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class SpringCourseOneApplication {
+public class ProjectManagementApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(SpringCourseOneApplication.class, args);
+        SpringApplication.run(ProjectManagementApplication.class, args);
     }
 
 }

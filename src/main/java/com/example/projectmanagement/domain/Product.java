@@ -1,4 +1,4 @@
-package com.example.springcourseone.domain;
+package com.example.projectmanagement.domain;
 
 public class Product {
 

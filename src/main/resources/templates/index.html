@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <title>Home page</title>
 </head>
-<body><div data-role="page">
+<body>
+<div data-role="page">
     <div data-role="header">
         <h1>Sign Up</h1>
     </div>
@@ -32,7 +33,7 @@
                 <label for="yes">Yes</label>
                 <input type="checkbox" name="favcolor" id="yes" th:field="${formData.employed}" th:value="true" checked>
                 <label for="no">No</label>
-                <input type="checkbox" name="favcolor" id="no"  th:field="${formData.employed}" th:value="false">
+                <input type="checkbox" name="favcolor" id="no" th:field="${formData.employed}" th:value="false">
             </fieldset>
             <input type="submit" data-inline="true" value="Submit">
             <input type="reset" data-inline="true" value="Reset">

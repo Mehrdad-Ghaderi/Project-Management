@@ -1,6 +1,6 @@
-package com.example.springcourseone.web;
+package com.example.projectmanagement.web;
 
-import com.example.springcourseone.domain.Product;
+import com.example.projectmanagement.domain.Product;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;

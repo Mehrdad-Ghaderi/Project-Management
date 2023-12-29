@@ -1,4 +1,4 @@
-package com.example.springcourseone.web;
+package com.example.projectmanagement.web;
 
 import org.springframework.web.bind.annotation.*;
 
