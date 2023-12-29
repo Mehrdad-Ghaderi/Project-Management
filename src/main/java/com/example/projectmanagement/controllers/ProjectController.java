@@ -16,7 +16,7 @@ public class ProjectController {
     ProjectRepository projectRepository;
 
     @GetMapping("/new")
-    public String displayProjectFor(Model model) {
+    public String displayProjectForm(Model model) {
 
         model.addAttribute("project", new Project());
         return "new-project";
