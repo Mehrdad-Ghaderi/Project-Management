@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home page</title>
+</head>
+<body>
+<div data-role="page">
+    <div data-role="header">
+        <h1>Sign Up</h1>
+    </div>
+
+    <div data-role="main" class="ui-content">
+        <form action="/projects/save" method="POST" th:object="${project}">
+            <fieldset data-role="controlgroup">
+                <legend>Project information:</legend>
+
+                <label for="name"></label>
+                Project name: <input type="text" id="name" th:field="${project.name}"> <br>
+                <br>
+
+                <label for="stage">Choose a stage:</label>
+                <select name="stage" id="stage">
+                    <option th:value="NOTSTARTED">Not started</option>
+                    <option th:value="INPROGRESS">In progress</option>
+                    <option th:value="COLPLETED">Completed</option>
+                </select>
+
+                <br>
+                <br>
+                <label for="description">Description</label>
+                <textarea type="text" id="description" placeholder="type project description" th:field="${project.description}"></textarea>
+
+            </fieldset>
+
+
+            <button type="submit">Create Project</button>
+            <input type="submit" data-inline="true" value="Submit">
+            <input type="reset" data-inline="true" value="Reset">
+        </form>
+    </div>
+</div>
+
+</body>
+</html>
