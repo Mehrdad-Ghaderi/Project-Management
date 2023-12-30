@@ -29,4 +29,10 @@ public class EmployeeController {
         return "redirect:/employees/new";
     }
 
+    @GetMapping("/list")
+    public String displayEmployees(Model model) {
+        var employees = employeeRepository.findAll();
+        model.addAttribute("employees", employees);
+        return "employees/employees-list";
+    }
 }
