@@ -1,9 +1,6 @@
 package com.example.projectmanagement.entities;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 
 @Entity
 public class Employee {
@@ -14,6 +11,10 @@ public class Employee {
     private String firstName;
     private String lastName;
     private String email;
+
+    @ManyToOne
+    @JoinColumn(referencedColumnName = "id")
+    private Project project;
 
     public Employee() {
     }
