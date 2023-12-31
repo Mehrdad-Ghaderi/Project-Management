@@ -31,13 +31,23 @@
                 <br>
                 <br>
                 <label for="description">Description</label>
+
                 <textarea type="text" id="description" placeholder="type project description" th:field="${project.description}"></textarea>
+                <br>
+                <!--these two are the same *{employees} = ${project.employees}-->
+                <label for="employee">Employees</label>
+                <select id="employee" th:field="*{employees}" multiple="multiple">
+                    <option th:each="employee : ${employees}"
+                            th:value="${employee.id}"
+                            th:text="${employee.firstName}">
+
+                    </option>
+                </select>
 
             </fieldset>
 
 
             <button type="submit">Create Project</button>
-            <input type="submit" data-inline="true" value="Submit">
             <input type="reset" data-inline="true" value="Reset">
         </form>
     </div>

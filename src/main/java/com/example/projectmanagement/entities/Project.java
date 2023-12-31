@@ -13,6 +13,7 @@ public class Project {
     private String name;
     private String stage;
     private String description;
+
     @OneToMany(mappedBy = "project")
     private List<Employee> employees;
 
@@ -23,6 +24,14 @@ public class Project {
         this.name = name;
         this.stage = stage;
         this.description = description;
+    }
+
+    public long getId() {
+        return id;
+    }
+
+    public void setId(long id) {
+        this.id = id;
     }
 
     public String getName() {
@@ -49,4 +58,11 @@ public class Project {
         this.description = description;
     }
 
+    public List<Employee> getEmployees() {
+        return employees;
+    }
+
+    public void setEmployees(List<Employee> employees) {
+        this.employees = employees;
+    }
 }
