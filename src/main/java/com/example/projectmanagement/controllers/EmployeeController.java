@@ -26,7 +26,7 @@ public class EmployeeController {
     public String createEmployee(Employee employee, Model model) {
         employeeRepository.save(employee);
 
-        return "redirect:/employees/new";
+        return "redirect:/employees/list";
     }
 
     @GetMapping("/list")

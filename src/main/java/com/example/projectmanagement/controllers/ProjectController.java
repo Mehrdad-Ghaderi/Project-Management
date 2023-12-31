@@ -13,7 +13,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.List;
-import java.util.Optional;
 
 @Controller
 @RequestMapping("/projects")
@@ -33,17 +32,11 @@ public class ProjectController {
     }
 
     @PostMapping("/save")
-    public String createProject(Project project, @RequestParam List<Long> employees, Model model) {
+    public String createProject(Project project, Model model) {
 
         projectRepository.save(project);
 
-        var allEmployeeById = employeeRepository.findAllById(employees);
-        for (var employee : allEmployeeById) {
-            employee.setProject(project);
-            employeeRepository.save(employee);
-        }
-
-        return "redirect:/projects/new";
+        return "redirect:/projects/list";
     }
 
     @GetMapping("/list")
