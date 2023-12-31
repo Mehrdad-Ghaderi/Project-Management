@@ -13,15 +13,15 @@
     <table>
         <thead>
         <tr>
-            <th>Project Name</th>
-            <th>Project Stage</th>
+            <th>Name</th>
+            <th>Stage</th>
         </tr>
         </thead>
 
         <tbody>
-        <tr th:each="aProject : ${projectList}">
-            <td th:text="${aProject.name}">
-            <td th:text="${aProject.stage}">
+        <tr th:each="project : ${projectList}">
+            <td th:text="${project.name}">
+            <td th:text="${project.stage}">
             </td>
         </tr>
         </tbody>
@@ -34,15 +34,17 @@
     <table>
         <thead>
         <tr>
-            <th>Employee Name</th>
-            <th>employee Phone number</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Phone number</th>
         </tr>
         </thead>
 
         <tbody>
-        <tr th:each="aProject : ${projectList}">
-            <td th:text="${aProject.name}">
-            <td th:text="${aProject.stage}">
+        <tr th:each="employee : ${employees}">
+            <td th:text="${employee.firstName}">
+            <td th:text="${employee.lastName}">
+            <td th:text="${employee.email}">
             </td>
         </tr>
         </tbody>
