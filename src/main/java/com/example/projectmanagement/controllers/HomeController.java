@@ -19,7 +19,7 @@ public class HomeController {
     @Autowired
     EmployeeRepository employeeRepository;
 
-    @GetMapping("/")
+    @GetMapping("/home")
     public String displayHome(Model model) {
         List<Project> projectList = projectRepository.findAll();
         model.addAttribute("projectList", projectList);
