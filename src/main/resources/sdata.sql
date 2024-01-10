@@ -1,4 +1,4 @@
--- INSERT EMPLOYEES			
+-- INSERT EMPLOYEES
 insert into employee (id, first_name, last_name, email) values (1, 'John', 'Warton', 'warton@gmail.com');
 insert into employee (id, first_name, last_name, email) values (2, 'Mike', 'Lanister', 'lanister@gmail.com');
 insert into employee (id, first_name, last_name, email) values (3, 'Steve', 'Reeves', 'Reeves@gmail.com');
@@ -9,7 +9,7 @@ insert into employee (id, first_name, last_name, email) values (7, 'Richard', 'C
 insert into employee (id, first_name, last_name, email) values (8, 'Honor', 'Miles', 'miles@gmail.com');
 insert into employee (id, first_name, last_name, email) values (9, 'Tony', 'Roggers', 'roggers@gmail.com');
 
--- INSERT PROJECTS			
+-- INSERT PROJECTS
 insert into project (id, name, stage, description) values (1000, 'Large Production Deploy', 'NOTSTARTED', 'This requires all hands on deck for the final deployment of the software into production');
 insert into project (id, name, stage, description) values (1001, 'New Employee Budget',  'COMPLETED', 'Decide on a new employee bonus budget for the year and figureout who will be promoted');
 insert into project (id, name, stage, description) values (1002, 'Office Reconstruction', 'INPROGRESS', 'The office building in Monroe has been damaged due to hurricane in the region. This needs to be reconstructed');
