@@ -4,59 +4,67 @@
 
     <title>Home</title>
 
+    <nav th:replace="layouts :: navbar"></nav>
 <body>
-
-<nav th:replace="layouts :: navbar"></nav>
-
-<div>
+<div class="container">
+    <h3>Main Dashboard</h3>
+    <hr>
     <h4>Current Projects</h4>
-    <table>
-        <thead>
-        <tr>
-            <th>Name</th>
-            <th>Stage</th>
-        </tr>
-        </thead>
-
-        <tbody>
-        <tr th:each="project : ${projectList}">
-            <td th:text="${project.name}">
-            <td th:text="${project.stage}">
-            </td>
-        </tr>
-        </tbody>
-
-    </table>
+    <div class="row">
+        <div class="col-md-6">
+            <table class="table table-bordered table-striped">
+                <thead class="thead-dark">
+                <tr>
+                    <th>Name</th>
+                    <th>Stage</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr th:each="project : ${projectList}">
+                    <td th:text="${project.name}">
+                    <td th:text="${project.stage}">
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="col-md-4">
+            <canvas id="myPieChart" height="50" width="50"></canvas>
+        </div>
+    </div>
 </div>
 
-<div>
+<div class="container">
+
     <h4>Current Employees</h4>
-    <table>
-        <thead>
-        <tr>
-            <th>First Name</th>
-            <th>Last Name</th>
-            <th>Phone number</th>
-        </tr>
-        </thead>
+    <div class="row">
+        <div class="col-md-6">
+            <table class="table table-bordered table-striped">
+                <thead class="thead-dark">
+                <tr>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Phone number</th>
+                </tr>
+                </thead>
 
-        <tbody>
-        <tr th:each="employee : ${employees}">
-            <td th:text="${employee.firstName}">
-            <td th:text="${employee.lastName}">
-            <td th:text="${employee.email}">
-            </td>
-        </tr>
-        </tbody>
+                <tbody>
+                <tr th:each="employee : ${employees}">
+                    <td th:text="${employee.firstName}">
+                    <td th:text="${employee.lastName}">
+                    <td th:text="${employee.email}">
+                    </td>
+                </tr>
+                </tbody>
 
-    </table>
+            </table>
+        </div>
+    </div>
+
 </div>
 
-<div class="col-md-4">
-    <canvas id="myPieChart" height="50" width="50"></canvas>
-</div>
 
 <script type="text/javascript" th:src="@{js/myChart.js}"></script>
 
 </body>
-</head></head></html>
+</html>

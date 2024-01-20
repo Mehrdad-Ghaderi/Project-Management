@@ -1,10 +1,11 @@
 new Chart(document.getElementById("myPieChart"), {
     type: 'pie',
-        data: {
-        labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
-            datasets: [{
-            label: 'my pie chart',
-            data: [12, 19, 3, 5, 2, 3],
+    data: {
+        labels: ['January', 'February', 'March'],
+        datasets: [{
+            label: 'The Projects chart',
+            backgroundColor: ["#3e95cd", "#8e5ea2", "#3cba9f"],
+            data: [12, 19, 3],
             borderWidth: 1
         }]
     },
@@ -16,7 +17,7 @@ new Chart(document.getElementById("myPieChart"), {
             },
             title: {
                 display: true,
-                text: 'Chart.js Doughnut Chart'
+                text: 'Projects Chart'
             }
         }
     },
