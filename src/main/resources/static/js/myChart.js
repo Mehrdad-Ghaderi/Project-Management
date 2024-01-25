@@ -1,4 +1,4 @@
-let chartData = decodeHtml(chartData); //the second chartData comes from home.html and cuz it's encrypted we need to decrypt it then we can use it
+let chartData = decodeHtml(chartData1); //the second chartData comes from home.html and cuz it's encrypted we need to decrypt it then we can use it
 let chartJsonArray = JSON.parse(chartData);
 let arrayLength = chartJsonArray.length;
 let numericData = [];
@@ -11,7 +11,7 @@ for (let i = 0; i < arrayLength; i++) {
 }
 
 
-new Chart(document.getElementById("myPieChart"), {
+new Chart(document.getElementById("thePieChart"), {
     type: 'pie',
     data: {
         labels: labelData,

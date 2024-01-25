@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org" lang="en">
-<head th:replace="layouts :: header">
+<head th:replace="~{layouts :: header}">
 
     <title>Home</title>
 
-    <nav th:replace="layouts :: navbar"></nav>
 <body>
+<nav th:replace="~{layouts :: navbar}"></nav>
 <div class="container">
     <h3>Main Dashboard</h3>
     <a th:text="${versionNumber}"></a>
@@ -30,10 +30,18 @@
             </table>
         </div>
         <div class="col-md-4">
-            <canvas id="myPieChart" height="50" width="50"></canvas>
+            <canvas id="thePieChart" height="50" width="50"></canvas>
             <script>
-                const chartData = "[[${projectStatusCount}]]";
+                //const ctx = document.getElementById('thePieChart');
+                const chartData1 = "[[${projectStatusCount}]]";
+
+
             </script>
+
+
+           <!-- <script>
+                const chartData = "[[${projectStatusCount}]]";
+            </script>-->
         </div>
     </div>
 </div>
@@ -53,7 +61,7 @@
                 </thead>
 
                 <tbody>
-                <tr th:each="aEmployeeProjectCount : ${employeesProjectCount}">
+                <tr th:each="aEmployeeProjectCount : ${employeesListProjectCount}">
                     <td th:text="${aEmployeeProjectCount.firstName}">
                     <td th:text="${aEmployeeProjectCount.lastName}">
                     <td th:text="${aEmployeeProjectCount.projectCount}">

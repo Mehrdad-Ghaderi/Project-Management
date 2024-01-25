@@ -25,7 +25,6 @@ public class HomeController {
     @Autowired
     ProjectRepository projectRepository;
 
-
     @Autowired
     EmployeeRepository employeeRepository;
 
@@ -36,18 +35,18 @@ public class HomeController {
         List<Project> projectList = projectRepository.findAll();
         model.addAttribute("projectList", projectList);
 
+        //The second Type is Object because we want it to be generic
         Map<String, Object> map = new HashMap<>();
-        var chartData = projectRepository.getProjectStatus();
+        var projectData = projectRepository.getProjectStatus();
 
-        //converting chartData to JSON for JS
+        //converting projectData to JSON for JS
         ObjectMapper objectMapper = new ObjectMapper();
-        String jsonString = objectMapper.writeValueAsString(chartData);
+        String jsonString = objectMapper.writeValueAsString(projectData);
         //the former method creates this: {["NOTSTARTED",1], ["COMPLETED", 2], ["INPROGRESS", 4]}
-
         model.addAttribute("projectStatusCount", jsonString);
 
         var employeeProjectsCount = employeeRepository.getEmployeeProjectsCount();
-        model.addAttribute("employeesProjectCount", employeeProjectsCount);
+        model.addAttribute("employeesListProjectCount", employeeProjectsCount);
         return "main/home";
     }
 }
