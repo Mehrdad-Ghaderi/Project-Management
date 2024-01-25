@@ -38,12 +38,15 @@ public class HomeController {
 
         Map<String, Object> map = new HashMap<>();
         var chartData = projectRepository.getProjectStatus();
-        //converting chartData to JSON for JS
-        ObjectMapper objectMapper = new ObjectMapper();
-        String jsonString = objectMapper.writeValueAsString(chartData);
-        //the former method creates this: {["NOTSTARTED",1], ["COMPLETED", 2], ["INPROGRESS", 4]}
 
-        model.addAttribute("projectStatusCount", jsonString);
+        if (!chartData.isEmpty()) {
+            //converting chartData to JSON for JS
+            ObjectMapper objectMapper = new ObjectMapper();
+            String jsonString = objectMapper.writeValueAsString(chartData);
+            //the former method creates this: {["NOTSTARTED",1], ["COMPLETED", 2], ["INPROGRESS", 4]}
+
+            model.addAttribute("projectStatusCount", jsonString);
+        }
 
         var employeeProjectsCount = employeeRepository.getEmployeeProjectsCount();
         model.addAttribute("employeesProjectCount", employeeProjectsCount);

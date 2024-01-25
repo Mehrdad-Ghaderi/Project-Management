@@ -11,9 +11,11 @@ public interface EmployeeRepository extends CrudRepository<Employee, Long> {
 
     public List<Employee> findAll();
 
-    @Query(nativeQuery = true, value="SELECT e.first_name as firstName, e.last_name as lastName, COUNT(pe.employee_id) AS projectCount " +
-            "From employee e left join project_employee pe ON pe.employee_id = employee_id " +
-            "GROUP BY e.first_name, e.last_name ORDER BY 3 DESC ")
+    @Query(nativeQuery = true, value="SELECT e.id, e.first_name, COUNT(DISTINCT p.project_id) AS num_projects " +
+            "FROM projects.employee e " +
+            "JOIN projects.project_employee p ON e.id = p.employee_id " +
+            "GROUP BY e.id, e.first_name " +
+            "ORDER BY num_projects DESC;")
     public List<EmployeeProject> getEmployeeProjectsCount();
 
 }

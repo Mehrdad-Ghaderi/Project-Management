@@ -4,5 +4,5 @@ public interface ChartData {
 
     String getLabel();
 
-    long getNumber();
+    Integer getNumber();
 }
