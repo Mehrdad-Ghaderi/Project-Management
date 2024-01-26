@@ -15,10 +15,10 @@ public class Project {
     private String stage;
     private String description;
 
-    @ManyToMany(mappedBy = "projects")
-    /*@JoinTable(name = "project_employee",
+    @ManyToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    @JoinTable(name = "project_employee",
             joinColumns = @JoinColumn(name = "project_id"),
-            inverseJoinColumns = @JoinColumn(name = "employee_id"))*/
+            inverseJoinColumns = @JoinColumn(name = "employee_id"))
     private List<Employee> employees;
 
     public Project() {

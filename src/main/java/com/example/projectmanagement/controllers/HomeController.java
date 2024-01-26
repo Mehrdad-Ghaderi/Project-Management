@@ -45,7 +45,7 @@ public class HomeController {
         //the former method creates this: {["NOTSTARTED",1], ["COMPLETED", 2], ["INPROGRESS", 4]}
         model.addAttribute("projectStatusCount", jsonString);
 
-        var employeeProjectsCount = employeeRepository.getEmployeeProjectsCount();
+        var employeeProjectsCount = employeeRepository.getEmployeeProjects();
         model.addAttribute("employeesListProjectCount", employeeProjectsCount);
         return "main/home";
     }
