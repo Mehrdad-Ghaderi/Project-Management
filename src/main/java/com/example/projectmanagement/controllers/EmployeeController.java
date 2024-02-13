@@ -1,7 +1,7 @@
 package com.example.projectmanagement.controllers;
 
-import com.example.projectmanagement.dao.EmployeeRepository;
 import com.example.projectmanagement.entities.Employee;
+import com.example.projectmanagement.services.EmployeeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping("/employees")
 public class EmployeeController {
     @Autowired
-    EmployeeRepository employeeRepository;
+    EmployeeService employeeService;
 
     @GetMapping("/new")
     public String displayEmployeeForm(Model model) {
@@ -24,14 +24,14 @@ public class EmployeeController {
 
     @PostMapping("/save")
     public String createEmployee(Employee employee, Model model) {
-        employeeRepository.save(employee);
+        employeeService.save(employee);
 
         return "redirect:/employees/list";
     }
 
     @GetMapping("/list")
     public String displayEmployees(Model model) {
-        var employees = employeeRepository.findAll();
+        var employees = employeeService.getAll();
         model.addAttribute("employees", employees);
         return "employees/employees-list";
     }

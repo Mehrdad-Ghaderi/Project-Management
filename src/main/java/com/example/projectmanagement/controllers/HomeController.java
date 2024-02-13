@@ -1,8 +1,8 @@
 package com.example.projectmanagement.controllers;
 
-import com.example.projectmanagement.dao.EmployeeRepository;
-import com.example.projectmanagement.dao.ProjectRepository;
 import com.example.projectmanagement.entities.Project;
+import com.example.projectmanagement.services.EmployeeService;
+import com.example.projectmanagement.services.ProjectService;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,21 +23,21 @@ public class HomeController {
     private String ver;
 
     @Autowired
-    ProjectRepository projectRepository;
+    ProjectService projectService;
 
     @Autowired
-    EmployeeRepository employeeRepository;
+    EmployeeService employeeService;
 
     @GetMapping("/home")
     public String displayHome(Model model) throws JsonProcessingException {
         model.addAttribute("versionNumber", ver);
 
-        List<Project> projectList = projectRepository.findAll();
+        List<Project> projectList = projectService.getAll();
         model.addAttribute("projectList", projectList);
 
         //The second Type is Object because we want it to be generic
         Map<String, Object> map = new HashMap<>();
-        var projectData = projectRepository.getProjectStatus();
+        var projectData = projectService.getProjectStatus();
 
         //converting projectData to JSON for JS
         ObjectMapper objectMapper = new ObjectMapper();
@@ -45,7 +45,7 @@ public class HomeController {
         //the former method creates this: {["NOTSTARTED",1], ["COMPLETED", 2], ["INPROGRESS", 4]}
         model.addAttribute("projectStatusCount", jsonString);
 
-        var employeeProjectsCount = employeeRepository.getEmployeeProjects();
+        var employeeProjectsCount = employeeService.getEmployeeProjects();
         model.addAttribute("employeesListProjectCount", employeeProjectsCount);
         return "main/home";
     }
