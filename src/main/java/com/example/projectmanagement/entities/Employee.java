@@ -1,7 +1,6 @@
 package com.example.projectmanagement.entities;
 
 import jakarta.persistence.*;
-import jakarta.validation.constraints.NotBlank;
 import java.util.List;
 
 @Entity

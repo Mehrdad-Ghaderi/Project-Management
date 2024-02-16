@@ -1,0 +1,628 @@
+2024-02-17T00:05:48.192+03:30  WARN 12328 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: java.lang.IllegalStateException: Error processing condition on org.springframework.boot.autoconfigure.security.servlet.SpringBootWebSecurityConfiguration$SecurityFilterChainConfiguration
+2024-02-17T00:05:48.277+03:30  INFO 12328 --- [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-02-17T00:05:48.378+03:30 ERROR 12328 --- [main] o.s.boot.SpringApplication               : Application run failed
+
+java.lang.IllegalStateException: Error processing condition on org.springframework.boot.autoconfigure.security.servlet.SpringBootWebSecurityConfiguration$SecurityFilterChainConfiguration
+	at org.springframework.boot.autoconfigure.condition.SpringBootCondition.matches(SpringBootCondition.java:60) ~[spring-boot-autoconfigure-3.2.0.jar:3.2.0]
+	at org.springframework.context.annotation.ConditionEvaluator.shouldSkip(ConditionEvaluator.java:108) ~[spring-context-6.1.1.jar:6.1.1]
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader$TrackedConditionEvaluator.shouldSkip(ConfigurationClassBeanDefinitionReader.java:470) ~[spring-context-6.1.1.jar:6.1.1]
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitionsForConfigurationClass(ConfigurationClassBeanDefinitionReader.java:131) ~[spring-context-6.1.1.jar:6.1.1]
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitions(ConfigurationClassBeanDefinitionReader.java:120) ~[spring-context-6.1.1.jar:6.1.1]
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:428) ~[spring-context-6.1.1.jar:6.1.1]
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:289) ~[spring-context-6.1.1.jar:6.1.1]
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:349) ~[spring-context-6.1.1.jar:6.1.1]
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:118) ~[spring-context-6.1.1.jar:6.1.1]
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:775) ~[spring-context-6.1.1.jar:6.1.1]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:597) ~[spring-context-6.1.1.jar:6.1.1]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.2.0.jar:3.2.0]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:753) ~[spring-boot-3.2.0.jar:3.2.0]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:455) ~[spring-boot-3.2.0.jar:3.2.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:323) ~[spring-boot-3.2.0.jar:3.2.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1342) ~[spring-boot-3.2.0.jar:3.2.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1331) ~[spring-boot-3.2.0.jar:3.2.0]
+	at com.example.projectmanagement.ProjectManagementApplication.main(ProjectManagementApplication.java:12) ~[classes/:na]
+Caused by: java.lang.IllegalStateException: Failed to introspect Class [org.springframework.security.config.annotation.web.configuration.WebSecurityConfiguration] from ClassLoader [jdk.internal.loader.ClassLoaders$AppClassLoader@1d44bcfa]
+	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:483) ~[spring-core-6.1.1.jar:6.1.1]
+	at org.springframework.util.ReflectionUtils.doWithMethods(ReflectionUtils.java:360) ~[spring-core-6.1.1.jar:6.1.1]
+	at org.springframework.util.ReflectionUtils.getUniqueDeclaredMethods(ReflectionUtils.java:417) ~[spring-core-6.1.1.jar:6.1.1]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.lambda$getTypeForFactoryMethod$1(AbstractAutowireCapableBeanFactory.java:751) ~[spring-beans-6.1.1.jar:6.1.1]
+	at java.base/java.util.concurrent.ConcurrentHashMap.computeIfAbsent(ConcurrentHashMap.java:1708) ~[na:na]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.getTypeForFactoryMethod(AbstractAutowireCapableBeanFactory.java:750) ~[spring-beans-6.1.1.jar:6.1.1]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.determineTargetType(AbstractAutowireCapableBeanFactory.java:683) ~[spring-beans-6.1.1.jar:6.1.1]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.predictBeanType(AbstractAutowireCapableBeanFactory.java:654) ~[spring-beans-6.1.1.jar:6.1.1]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.isFactoryBean(AbstractBeanFactory.java:1636) ~[spring-beans-6.1.1.jar:6.1.1]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doGetBeanNamesForType(DefaultListableBeanFactory.java:560) ~[spring-beans-6.1.1.jar:6.1.1]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeanNamesForType(DefaultListableBeanFactory.java:532) ~[spring-beans-6.1.1.jar:6.1.1]
+	at org.springframework.boot.autoconfigure.condition.OnBeanCondition.collectBeanNamesForType(OnBeanCondition.java:247) ~[spring-boot-autoconfigure-3.2.0.jar:3.2.0]
+	at org.springframework.boot.autoconfigure.condition.OnBeanCondition.getBeanNamesForType(OnBeanCondition.java:240) ~[spring-boot-autoconfigure-3.2.0.jar:3.2.0]
+	at org.springframework.boot.autoconfigure.condition.OnBeanCondition.getBeanNamesForType(OnBeanCondition.java:230) ~[spring-boot-autoconfigure-3.2.0.jar:3.2.0]
+	at org.springframework.boot.autoconfigure.condition.OnBeanCondition.getMatchingBeans(OnBeanCondition.java:183) ~[spring-boot-autoconfigure-3.2.0.jar:3.2.0]
+	at org.springframework.boot.autoconfigure.condition.OnBeanCondition.getMatchOutcome(OnBeanCondition.java:158) ~[spring-boot-autoconfigure-3.2.0.jar:3.2.0]
+	at org.springframework.boot.autoconfigure.condition.AbstractNestedCondition$MemberOutcomes.getConditionOutcome(AbstractNestedCondition.java:195) ~[spring-boot-autoconfigure-3.2.0.jar:3.2.0]
+	at org.springframework.boot.autoconfigure.condition.AbstractNestedCondition$MemberOutcomes.<init>(AbstractNestedCondition.java:189) ~[spring-boot-autoconfigure-3.2.0.jar:3.2.0]
+	at org.springframework.boot.autoconfigure.condition.AbstractNestedCondition$MemberConditions.lambda$getMatchOutcomes$0(AbstractNestedCondition.java:169) ~[spring-boot-autoconfigure-3.2.0.jar:3.2.0]
+	at java.base/java.util.LinkedHashMap.forEach(LinkedHashMap.java:721) ~[na:na]
+	at org.springframework.util.MultiValueMapAdapter.forEach(MultiValueMapAdapter.java:179) ~[spring-core-6.1.1.jar:6.1.1]
+	at java.base/java.util.Collections$UnmodifiableMap.forEach(Collections.java:1553) ~[na:na]
+	at org.springframework.boot.autoconfigure.condition.AbstractNestedCondition$MemberConditions.getMatchOutcomes(AbstractNestedCondition.java:169) ~[spring-boot-autoconfigure-3.2.0.jar:3.2.0]
+	at org.springframework.boot.autoconfigure.condition.AbstractNestedCondition$MemberMatchOutcomes.<init>(AbstractNestedCondition.java:78) ~[spring-boot-autoconfigure-3.2.0.jar:3.2.0]
+	at org.springframework.boot.autoconfigure.condition.AbstractNestedCondition.getMatchOutcome(AbstractNestedCondition.java:63) ~[spring-boot-autoconfigure-3.2.0.jar:3.2.0]
+	at org.springframework.boot.autoconfigure.condition.SpringBootCondition.matches(SpringBootCondition.java:47) ~[spring-boot-autoconfigure-3.2.0.jar:3.2.0]
+	... 17 common frames omitted
+Caused by: java.lang.NoClassDefFoundError: javax/servlet/Filter
+	at java.base/java.lang.Class.getDeclaredMethods0(Native Method) ~[na:na]
+	at java.base/java.lang.Class.privateGetDeclaredMethods(Class.java:3402) ~[na:na]
+	at java.base/java.lang.Class.getDeclaredMethods(Class.java:2504) ~[na:na]
+	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:465) ~[spring-core-6.1.1.jar:6.1.1]
+	... 42 common frames omitted
+Caused by: java.lang.ClassNotFoundException: javax.servlet.Filter
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:641) ~[na:na]
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:188) ~[na:na]
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:520) ~[na:na]
+	... 46 common frames omitted
+
+2024-02-17T00:06:01.953+03:30  INFO 11044 --- [main] c.e.p.ProjectManagementApplication       : Starting ProjectManagementApplication using Java 17.0.2 with PID 11044 (D:\Mehrdad\Java\IdeaProjects\spring course one\target\classes started by MehRdad in D:\Mehrdad\Java\IdeaProjects\spring course one)
+2024-02-17T00:06:01.957+03:30 DEBUG 11044 --- [main] c.e.p.ProjectManagementApplication       : Running with Spring Boot v3.2.0, Spring v6.1.1
+2024-02-17T00:06:01.958+03:30  INFO 11044 --- [main] c.e.p.ProjectManagementApplication       : The following 1 profile is active: "dev"
+2024-02-17T00:06:03.499+03:30  INFO 11044 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-02-17T00:06:03.589+03:30  INFO 11044 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 77 ms. Found 2 JPA repository interfaces.
+2024-02-17T00:06:03.669+03:30  WARN 11044 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: java.lang.IllegalStateException: Error processing condition on org.springframework.boot.autoconfigure.security.servlet.SpringBootWebSecurityConfiguration$SecurityFilterChainConfiguration
+2024-02-17T00:06:03.693+03:30  INFO 11044 --- [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-02-17T00:06:03.739+03:30 ERROR 11044 --- [main] o.s.boot.SpringApplication               : Application run failed
+
+java.lang.IllegalStateException: Error processing condition on org.springframework.boot.autoconfigure.security.servlet.SpringBootWebSecurityConfiguration$SecurityFilterChainConfiguration
+	at org.springframework.boot.autoconfigure.condition.SpringBootCondition.matches(SpringBootCondition.java:60) ~[spring-boot-autoconfigure-3.2.0.jar:3.2.0]
+	at org.springframework.context.annotation.ConditionEvaluator.shouldSkip(ConditionEvaluator.java:108) ~[spring-context-6.1.1.jar:6.1.1]
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader$TrackedConditionEvaluator.shouldSkip(ConfigurationClassBeanDefinitionReader.java:470) ~[spring-context-6.1.1.jar:6.1.1]
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitionsForConfigurationClass(ConfigurationClassBeanDefinitionReader.java:131) ~[spring-context-6.1.1.jar:6.1.1]
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitions(ConfigurationClassBeanDefinitionReader.java:120) ~[spring-context-6.1.1.jar:6.1.1]
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:428) ~[spring-context-6.1.1.jar:6.1.1]
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:289) ~[spring-context-6.1.1.jar:6.1.1]
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:349) ~[spring-context-6.1.1.jar:6.1.1]
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:118) ~[spring-context-6.1.1.jar:6.1.1]
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:775) ~[spring-context-6.1.1.jar:6.1.1]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:597) ~[spring-context-6.1.1.jar:6.1.1]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.2.0.jar:3.2.0]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:753) ~[spring-boot-3.2.0.jar:3.2.0]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:455) ~[spring-boot-3.2.0.jar:3.2.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:323) ~[spring-boot-3.2.0.jar:3.2.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1342) ~[spring-boot-3.2.0.jar:3.2.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1331) ~[spring-boot-3.2.0.jar:3.2.0]
+	at com.example.projectmanagement.ProjectManagementApplication.main(ProjectManagementApplication.java:12) ~[classes/:na]
+Caused by: java.lang.IllegalStateException: Failed to introspect Class [org.springframework.security.config.annotation.web.configuration.WebSecurityConfiguration] from ClassLoader [jdk.internal.loader.ClassLoaders$AppClassLoader@1d44bcfa]
+	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:483) ~[spring-core-6.1.1.jar:6.1.1]
+	at org.springframework.util.ReflectionUtils.doWithMethods(ReflectionUtils.java:360) ~[spring-core-6.1.1.jar:6.1.1]
+	at org.springframework.util.ReflectionUtils.getUniqueDeclaredMethods(ReflectionUtils.java:417) ~[spring-core-6.1.1.jar:6.1.1]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.lambda$getTypeForFactoryMethod$1(AbstractAutowireCapableBeanFactory.java:751) ~[spring-beans-6.1.1.jar:6.1.1]
+	at java.base/java.util.concurrent.ConcurrentHashMap.computeIfAbsent(ConcurrentHashMap.java:1708) ~[na:na]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.getTypeForFactoryMethod(AbstractAutowireCapableBeanFactory.java:750) ~[spring-beans-6.1.1.jar:6.1.1]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.determineTargetType(AbstractAutowireCapableBeanFactory.java:683) ~[spring-beans-6.1.1.jar:6.1.1]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.predictBeanType(AbstractAutowireCapableBeanFactory.java:654) ~[spring-beans-6.1.1.jar:6.1.1]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.isFactoryBean(AbstractBeanFactory.java:1636) ~[spring-beans-6.1.1.jar:6.1.1]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doGetBeanNamesForType(DefaultListableBeanFactory.java:560) ~[spring-beans-6.1.1.jar:6.1.1]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeanNamesForType(DefaultListableBeanFactory.java:532) ~[spring-beans-6.1.1.jar:6.1.1]
+	at org.springframework.boot.autoconfigure.condition.OnBeanCondition.collectBeanNamesForType(OnBeanCondition.java:247) ~[spring-boot-autoconfigure-3.2.0.jar:3.2.0]
+	at org.springframework.boot.autoconfigure.condition.OnBeanCondition.getBeanNamesForType(OnBeanCondition.java:240) ~[spring-boot-autoconfigure-3.2.0.jar:3.2.0]
+	at org.springframework.boot.autoconfigure.condition.OnBeanCondition.getBeanNamesForType(OnBeanCondition.java:230) ~[spring-boot-autoconfigure-3.2.0.jar:3.2.0]
+	at org.springframework.boot.autoconfigure.condition.OnBeanCondition.getMatchingBeans(OnBeanCondition.java:183) ~[spring-boot-autoconfigure-3.2.0.jar:3.2.0]
+	at org.springframework.boot.autoconfigure.condition.OnBeanCondition.getMatchOutcome(OnBeanCondition.java:158) ~[spring-boot-autoconfigure-3.2.0.jar:3.2.0]
+	at org.springframework.boot.autoconfigure.condition.AbstractNestedCondition$MemberOutcomes.getConditionOutcome(AbstractNestedCondition.java:195) ~[spring-boot-autoconfigure-3.2.0.jar:3.2.0]
+	at org.springframework.boot.autoconfigure.condition.AbstractNestedCondition$MemberOutcomes.<init>(AbstractNestedCondition.java:189) ~[spring-boot-autoconfigure-3.2.0.jar:3.2.0]
+	at org.springframework.boot.autoconfigure.condition.AbstractNestedCondition$MemberConditions.lambda$getMatchOutcomes$0(AbstractNestedCondition.java:169) ~[spring-boot-autoconfigure-3.2.0.jar:3.2.0]
+	at java.base/java.util.LinkedHashMap.forEach(LinkedHashMap.java:721) ~[na:na]
+	at org.springframework.util.MultiValueMapAdapter.forEach(MultiValueMapAdapter.java:179) ~[spring-core-6.1.1.jar:6.1.1]
+	at java.base/java.util.Collections$UnmodifiableMap.forEach(Collections.java:1553) ~[na:na]
+	at org.springframework.boot.autoconfigure.condition.AbstractNestedCondition$MemberConditions.getMatchOutcomes(AbstractNestedCondition.java:169) ~[spring-boot-autoconfigure-3.2.0.jar:3.2.0]
+	at org.springframework.boot.autoconfigure.condition.AbstractNestedCondition$MemberMatchOutcomes.<init>(AbstractNestedCondition.java:78) ~[spring-boot-autoconfigure-3.2.0.jar:3.2.0]
+	at org.springframework.boot.autoconfigure.condition.AbstractNestedCondition.getMatchOutcome(AbstractNestedCondition.java:63) ~[spring-boot-autoconfigure-3.2.0.jar:3.2.0]
+	at org.springframework.boot.autoconfigure.condition.SpringBootCondition.matches(SpringBootCondition.java:47) ~[spring-boot-autoconfigure-3.2.0.jar:3.2.0]
+	... 17 common frames omitted
+Caused by: java.lang.NoClassDefFoundError: javax/servlet/Filter
+	at java.base/java.lang.Class.getDeclaredMethods0(Native Method) ~[na:na]
+	at java.base/java.lang.Class.privateGetDeclaredMethods(Class.java:3402) ~[na:na]
+	at java.base/java.lang.Class.getDeclaredMethods(Class.java:2504) ~[na:na]
+	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:465) ~[spring-core-6.1.1.jar:6.1.1]
+	... 42 common frames omitted
+Caused by: java.lang.ClassNotFoundException: javax.servlet.Filter
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:641) ~[na:na]
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:188) ~[na:na]
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:520) ~[na:na]
+	... 46 common frames omitted
+
+2024-02-17T00:06:29.663+03:30  INFO 7316 --- [main] c.e.p.ProjectManagementApplicationTests  : Starting ProjectManagementApplicationTests using Java 17.0.2 with PID 7316 (started by MehRdad in D:\Mehrdad\Java\IdeaProjects\spring course one)
+2024-02-17T00:06:29.665+03:30 DEBUG 7316 --- [main] c.e.p.ProjectManagementApplicationTests  : Running with Spring Boot v3.2.0, Spring v6.1.1
+2024-02-17T00:06:29.666+03:30  INFO 7316 --- [main] c.e.p.ProjectManagementApplicationTests  : The following 1 profile is active: "dev"
+2024-02-17T00:06:31.826+03:30  INFO 7316 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-02-17T00:06:31.960+03:30  INFO 7316 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 114 ms. Found 2 JPA repository interfaces.
+2024-02-17T00:06:35.748+03:30  INFO 7316 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-02-17T00:06:37.892+03:30  INFO 7316 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-02-17T00:06:38.799+03:30  INFO 7316 --- [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-02-17T00:06:39.357+03:30  WARN 7316 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-02-17T00:06:40.382+03:30  WARN 7316 --- [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 50f57465-c19f-46c4-97e7-0de1ebf8b7e5
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2024-02-17T00:06:40.770+03:30  INFO 7316 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@e594c46, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1cd853ee, org.springframework.security.web.context.SecurityContextHolderFilter@344f4a82, org.springframework.security.web.header.HeaderWriterFilter@2ac00dc9, org.springframework.web.filter.CorsFilter@6b6bae60, org.springframework.security.web.csrf.CsrfFilter@516370c1, org.springframework.security.web.authentication.logout.LogoutFilter@3652dd19, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@1b641c97, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@2d7df55, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@22c14d10, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@5578ed7e, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6441cff1, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1dc987b, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@66be0e72, org.springframework.security.web.access.ExceptionTranslationFilter@28be7db5, org.springframework.security.web.access.intercept.AuthorizationFilter@5dfc7b3f]
+2024-02-17T00:06:40.907+03:30  INFO 7316 --- [main] c.e.p.ProjectManagementApplicationTests  : Started ProjectManagementApplicationTests in 12.164 seconds (process running for 14.865)
+2024-02-17T00:06:42.338+03:30  INFO 7316 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-02-17T00:08:29.851+03:30  INFO 364 --- [main] c.e.p.ProjectManagementApplication       : Starting ProjectManagementApplication using Java 17.0.2 with PID 364 (D:\Mehrdad\Java\IdeaProjects\spring course one\target\classes started by MehRdad in D:\Mehrdad\Java\IdeaProjects\spring course one)
+2024-02-17T00:08:29.855+03:30 DEBUG 364 --- [main] c.e.p.ProjectManagementApplication       : Running with Spring Boot v3.2.0, Spring v6.1.1
+2024-02-17T00:08:29.857+03:30  INFO 364 --- [main] c.e.p.ProjectManagementApplication       : The following 1 profile is active: "dev"
+2024-02-17T00:08:31.514+03:30  INFO 364 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-02-17T00:08:31.631+03:30  INFO 364 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 99 ms. Found 2 JPA repository interfaces.
+2024-02-17T00:08:31.711+03:30  WARN 364 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: java.lang.IllegalStateException: Error processing condition on org.springframework.boot.autoconfigure.security.servlet.SpringBootWebSecurityConfiguration$SecurityFilterChainConfiguration
+2024-02-17T00:08:31.730+03:30  INFO 364 --- [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-02-17T00:08:31.779+03:30 ERROR 364 --- [main] o.s.boot.SpringApplication               : Application run failed
+
+java.lang.IllegalStateException: Error processing condition on org.springframework.boot.autoconfigure.security.servlet.SpringBootWebSecurityConfiguration$SecurityFilterChainConfiguration
+	at org.springframework.boot.autoconfigure.condition.SpringBootCondition.matches(SpringBootCondition.java:60) ~[spring-boot-autoconfigure-3.2.0.jar:3.2.0]
+	at org.springframework.context.annotation.ConditionEvaluator.shouldSkip(ConditionEvaluator.java:108) ~[spring-context-6.1.1.jar:6.1.1]
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader$TrackedConditionEvaluator.shouldSkip(ConfigurationClassBeanDefinitionReader.java:470) ~[spring-context-6.1.1.jar:6.1.1]
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitionsForConfigurationClass(ConfigurationClassBeanDefinitionReader.java:131) ~[spring-context-6.1.1.jar:6.1.1]
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitions(ConfigurationClassBeanDefinitionReader.java:120) ~[spring-context-6.1.1.jar:6.1.1]
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:428) ~[spring-context-6.1.1.jar:6.1.1]
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:289) ~[spring-context-6.1.1.jar:6.1.1]
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:349) ~[spring-context-6.1.1.jar:6.1.1]
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:118) ~[spring-context-6.1.1.jar:6.1.1]
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:775) ~[spring-context-6.1.1.jar:6.1.1]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:597) ~[spring-context-6.1.1.jar:6.1.1]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.2.0.jar:3.2.0]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:753) ~[spring-boot-3.2.0.jar:3.2.0]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:455) ~[spring-boot-3.2.0.jar:3.2.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:323) ~[spring-boot-3.2.0.jar:3.2.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1342) ~[spring-boot-3.2.0.jar:3.2.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1331) ~[spring-boot-3.2.0.jar:3.2.0]
+	at com.example.projectmanagement.ProjectManagementApplication.main(ProjectManagementApplication.java:12) ~[classes/:na]
+Caused by: java.lang.IllegalStateException: Failed to introspect Class [org.springframework.security.config.annotation.web.configuration.WebSecurityConfiguration] from ClassLoader [jdk.internal.loader.ClassLoaders$AppClassLoader@1d44bcfa]
+	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:483) ~[spring-core-6.1.1.jar:6.1.1]
+	at org.springframework.util.ReflectionUtils.doWithMethods(ReflectionUtils.java:360) ~[spring-core-6.1.1.jar:6.1.1]
+	at org.springframework.util.ReflectionUtils.getUniqueDeclaredMethods(ReflectionUtils.java:417) ~[spring-core-6.1.1.jar:6.1.1]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.lambda$getTypeForFactoryMethod$1(AbstractAutowireCapableBeanFactory.java:751) ~[spring-beans-6.1.1.jar:6.1.1]
+	at java.base/java.util.concurrent.ConcurrentHashMap.computeIfAbsent(ConcurrentHashMap.java:1708) ~[na:na]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.getTypeForFactoryMethod(AbstractAutowireCapableBeanFactory.java:750) ~[spring-beans-6.1.1.jar:6.1.1]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.determineTargetType(AbstractAutowireCapableBeanFactory.java:683) ~[spring-beans-6.1.1.jar:6.1.1]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.predictBeanType(AbstractAutowireCapableBeanFactory.java:654) ~[spring-beans-6.1.1.jar:6.1.1]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.isFactoryBean(AbstractBeanFactory.java:1636) ~[spring-beans-6.1.1.jar:6.1.1]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doGetBeanNamesForType(DefaultListableBeanFactory.java:560) ~[spring-beans-6.1.1.jar:6.1.1]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeanNamesForType(DefaultListableBeanFactory.java:532) ~[spring-beans-6.1.1.jar:6.1.1]
+	at org.springframework.boot.autoconfigure.condition.OnBeanCondition.collectBeanNamesForType(OnBeanCondition.java:247) ~[spring-boot-autoconfigure-3.2.0.jar:3.2.0]
+	at org.springframework.boot.autoconfigure.condition.OnBeanCondition.getBeanNamesForType(OnBeanCondition.java:240) ~[spring-boot-autoconfigure-3.2.0.jar:3.2.0]
+	at org.springframework.boot.autoconfigure.condition.OnBeanCondition.getBeanNamesForType(OnBeanCondition.java:230) ~[spring-boot-autoconfigure-3.2.0.jar:3.2.0]
+	at org.springframework.boot.autoconfigure.condition.OnBeanCondition.getMatchingBeans(OnBeanCondition.java:183) ~[spring-boot-autoconfigure-3.2.0.jar:3.2.0]
+	at org.springframework.boot.autoconfigure.condition.OnBeanCondition.getMatchOutcome(OnBeanCondition.java:158) ~[spring-boot-autoconfigure-3.2.0.jar:3.2.0]
+	at org.springframework.boot.autoconfigure.condition.AbstractNestedCondition$MemberOutcomes.getConditionOutcome(AbstractNestedCondition.java:195) ~[spring-boot-autoconfigure-3.2.0.jar:3.2.0]
+	at org.springframework.boot.autoconfigure.condition.AbstractNestedCondition$MemberOutcomes.<init>(AbstractNestedCondition.java:189) ~[spring-boot-autoconfigure-3.2.0.jar:3.2.0]
+	at org.springframework.boot.autoconfigure.condition.AbstractNestedCondition$MemberConditions.lambda$getMatchOutcomes$0(AbstractNestedCondition.java:169) ~[spring-boot-autoconfigure-3.2.0.jar:3.2.0]
+	at java.base/java.util.LinkedHashMap.forEach(LinkedHashMap.java:721) ~[na:na]
+	at org.springframework.util.MultiValueMapAdapter.forEach(MultiValueMapAdapter.java:179) ~[spring-core-6.1.1.jar:6.1.1]
+	at java.base/java.util.Collections$UnmodifiableMap.forEach(Collections.java:1553) ~[na:na]
+	at org.springframework.boot.autoconfigure.condition.AbstractNestedCondition$MemberConditions.getMatchOutcomes(AbstractNestedCondition.java:169) ~[spring-boot-autoconfigure-3.2.0.jar:3.2.0]
+	at org.springframework.boot.autoconfigure.condition.AbstractNestedCondition$MemberMatchOutcomes.<init>(AbstractNestedCondition.java:78) ~[spring-boot-autoconfigure-3.2.0.jar:3.2.0]
+	at org.springframework.boot.autoconfigure.condition.AbstractNestedCondition.getMatchOutcome(AbstractNestedCondition.java:63) ~[spring-boot-autoconfigure-3.2.0.jar:3.2.0]
+	at org.springframework.boot.autoconfigure.condition.SpringBootCondition.matches(SpringBootCondition.java:47) ~[spring-boot-autoconfigure-3.2.0.jar:3.2.0]
+	... 17 common frames omitted
+Caused by: java.lang.NoClassDefFoundError: javax/servlet/Filter
+	at java.base/java.lang.Class.getDeclaredMethods0(Native Method) ~[na:na]
+	at java.base/java.lang.Class.privateGetDeclaredMethods(Class.java:3402) ~[na:na]
+	at java.base/java.lang.Class.getDeclaredMethods(Class.java:2504) ~[na:na]
+	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:465) ~[spring-core-6.1.1.jar:6.1.1]
+	... 42 common frames omitted
+Caused by: java.lang.ClassNotFoundException: javax.servlet.Filter
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:641) ~[na:na]
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:188) ~[na:na]
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:520) ~[na:na]
+	... 46 common frames omitted
+
+2024-02-17T00:13:42.474+03:30  INFO 3768 --- [main] c.e.p.ProjectManagementApplicationTests  : Starting ProjectManagementApplicationTests using Java 17.0.2 with PID 3768 (started by MehRdad in D:\Mehrdad\Java\IdeaProjects\spring course one)
+2024-02-17T00:13:42.483+03:30 DEBUG 3768 --- [main] c.e.p.ProjectManagementApplicationTests  : Running with Spring Boot v3.2.0, Spring v6.1.1
+2024-02-17T00:13:42.504+03:30  INFO 3768 --- [main] c.e.p.ProjectManagementApplicationTests  : The following 1 profile is active: "dev"
+2024-02-17T00:13:46.095+03:30  INFO 3768 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-02-17T00:13:46.304+03:30  INFO 3768 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 174 ms. Found 2 JPA repository interfaces.
+2024-02-17T00:13:51.081+03:30  INFO 3768 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-02-17T00:13:54.214+03:30  INFO 3768 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-02-17T00:13:54.949+03:30  INFO 3768 --- [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-02-17T00:13:55.637+03:30  WARN 3768 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-02-17T00:13:56.987+03:30  WARN 3768 --- [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 242fb65d-c8d9-4b30-9a75-bf4e6cf11cd3
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2024-02-17T00:13:57.634+03:30  INFO 3768 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@58fbecde, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@299615a5, org.springframework.security.web.context.SecurityContextHolderFilter@1509bd56, org.springframework.security.web.header.HeaderWriterFilter@3c20abd6, org.springframework.web.filter.CorsFilter@3ba6707e, org.springframework.security.web.csrf.CsrfFilter@ec67be1, org.springframework.security.web.authentication.logout.LogoutFilter@1851f19f, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@20ee660b, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@344f4a82, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@4b407ac7, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@106c3e0a, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@466bf366, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@28be7db5, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4c5ae26d, org.springframework.security.web.access.ExceptionTranslationFilter@375682a5, org.springframework.security.web.access.intercept.AuthorizationFilter@4ff00844]
+2024-02-17T00:13:58.074+03:30  INFO 3768 --- [main] c.e.p.ProjectManagementApplicationTests  : Started ProjectManagementApplicationTests in 16.573 seconds (process running for 19.301)
+2024-02-17T00:13:59.747+03:30  INFO 3768 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-02-17T00:14:39.197+03:30  INFO 9116 --- [main] c.e.p.ProjectManagementApplication       : Starting ProjectManagementApplication using Java 17.0.2 with PID 9116 (D:\Mehrdad\Java\IdeaProjects\spring course one\target\classes started by MehRdad in D:\Mehrdad\Java\IdeaProjects\spring course one)
+2024-02-17T00:14:39.201+03:30 DEBUG 9116 --- [main] c.e.p.ProjectManagementApplication       : Running with Spring Boot v3.2.0, Spring v6.1.1
+2024-02-17T00:14:39.202+03:30  INFO 9116 --- [main] c.e.p.ProjectManagementApplication       : The following 1 profile is active: "dev"
+2024-02-17T00:14:40.737+03:30  INFO 9116 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-02-17T00:14:40.852+03:30  INFO 9116 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 99 ms. Found 2 JPA repository interfaces.
+2024-02-17T00:14:40.974+03:30  WARN 9116 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: java.lang.IllegalStateException: Error processing condition on org.springframework.boot.autoconfigure.security.servlet.SpringBootWebSecurityConfiguration$SecurityFilterChainConfiguration
+2024-02-17T00:14:40.994+03:30  INFO 9116 --- [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-02-17T00:14:41.035+03:30 ERROR 9116 --- [main] o.s.boot.SpringApplication               : Application run failed
+
+java.lang.IllegalStateException: Error processing condition on org.springframework.boot.autoconfigure.security.servlet.SpringBootWebSecurityConfiguration$SecurityFilterChainConfiguration
+	at org.springframework.boot.autoconfigure.condition.SpringBootCondition.matches(SpringBootCondition.java:60) ~[spring-boot-autoconfigure-3.2.0.jar:3.2.0]
+	at org.springframework.context.annotation.ConditionEvaluator.shouldSkip(ConditionEvaluator.java:108) ~[spring-context-6.1.1.jar:6.1.1]
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader$TrackedConditionEvaluator.shouldSkip(ConfigurationClassBeanDefinitionReader.java:470) ~[spring-context-6.1.1.jar:6.1.1]
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitionsForConfigurationClass(ConfigurationClassBeanDefinitionReader.java:131) ~[spring-context-6.1.1.jar:6.1.1]
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitions(ConfigurationClassBeanDefinitionReader.java:120) ~[spring-context-6.1.1.jar:6.1.1]
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:428) ~[spring-context-6.1.1.jar:6.1.1]
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:289) ~[spring-context-6.1.1.jar:6.1.1]
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:349) ~[spring-context-6.1.1.jar:6.1.1]
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:118) ~[spring-context-6.1.1.jar:6.1.1]
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:775) ~[spring-context-6.1.1.jar:6.1.1]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:597) ~[spring-context-6.1.1.jar:6.1.1]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.2.0.jar:3.2.0]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:753) ~[spring-boot-3.2.0.jar:3.2.0]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:455) ~[spring-boot-3.2.0.jar:3.2.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:323) ~[spring-boot-3.2.0.jar:3.2.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1342) ~[spring-boot-3.2.0.jar:3.2.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1331) ~[spring-boot-3.2.0.jar:3.2.0]
+	at com.example.projectmanagement.ProjectManagementApplication.main(ProjectManagementApplication.java:12) ~[classes/:na]
+Caused by: java.lang.IllegalStateException: Failed to introspect Class [org.springframework.security.config.annotation.web.configuration.WebSecurityConfiguration] from ClassLoader [jdk.internal.loader.ClassLoaders$AppClassLoader@1d44bcfa]
+	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:483) ~[spring-core-6.1.1.jar:6.1.1]
+	at org.springframework.util.ReflectionUtils.doWithMethods(ReflectionUtils.java:360) ~[spring-core-6.1.1.jar:6.1.1]
+	at org.springframework.util.ReflectionUtils.getUniqueDeclaredMethods(ReflectionUtils.java:417) ~[spring-core-6.1.1.jar:6.1.1]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.lambda$getTypeForFactoryMethod$1(AbstractAutowireCapableBeanFactory.java:751) ~[spring-beans-6.1.1.jar:6.1.1]
+	at java.base/java.util.concurrent.ConcurrentHashMap.computeIfAbsent(ConcurrentHashMap.java:1708) ~[na:na]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.getTypeForFactoryMethod(AbstractAutowireCapableBeanFactory.java:750) ~[spring-beans-6.1.1.jar:6.1.1]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.determineTargetType(AbstractAutowireCapableBeanFactory.java:683) ~[spring-beans-6.1.1.jar:6.1.1]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.predictBeanType(AbstractAutowireCapableBeanFactory.java:654) ~[spring-beans-6.1.1.jar:6.1.1]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.isFactoryBean(AbstractBeanFactory.java:1636) ~[spring-beans-6.1.1.jar:6.1.1]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doGetBeanNamesForType(DefaultListableBeanFactory.java:560) ~[spring-beans-6.1.1.jar:6.1.1]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeanNamesForType(DefaultListableBeanFactory.java:532) ~[spring-beans-6.1.1.jar:6.1.1]
+	at org.springframework.boot.autoconfigure.condition.OnBeanCondition.collectBeanNamesForType(OnBeanCondition.java:247) ~[spring-boot-autoconfigure-3.2.0.jar:3.2.0]
+	at org.springframework.boot.autoconfigure.condition.OnBeanCondition.getBeanNamesForType(OnBeanCondition.java:240) ~[spring-boot-autoconfigure-3.2.0.jar:3.2.0]
+	at org.springframework.boot.autoconfigure.condition.OnBeanCondition.getBeanNamesForType(OnBeanCondition.java:230) ~[spring-boot-autoconfigure-3.2.0.jar:3.2.0]
+	at org.springframework.boot.autoconfigure.condition.OnBeanCondition.getMatchingBeans(OnBeanCondition.java:183) ~[spring-boot-autoconfigure-3.2.0.jar:3.2.0]
+	at org.springframework.boot.autoconfigure.condition.OnBeanCondition.getMatchOutcome(OnBeanCondition.java:158) ~[spring-boot-autoconfigure-3.2.0.jar:3.2.0]
+	at org.springframework.boot.autoconfigure.condition.AbstractNestedCondition$MemberOutcomes.getConditionOutcome(AbstractNestedCondition.java:195) ~[spring-boot-autoconfigure-3.2.0.jar:3.2.0]
+	at org.springframework.boot.autoconfigure.condition.AbstractNestedCondition$MemberOutcomes.<init>(AbstractNestedCondition.java:189) ~[spring-boot-autoconfigure-3.2.0.jar:3.2.0]
+	at org.springframework.boot.autoconfigure.condition.AbstractNestedCondition$MemberConditions.lambda$getMatchOutcomes$0(AbstractNestedCondition.java:169) ~[spring-boot-autoconfigure-3.2.0.jar:3.2.0]
+	at java.base/java.util.LinkedHashMap.forEach(LinkedHashMap.java:721) ~[na:na]
+	at org.springframework.util.MultiValueMapAdapter.forEach(MultiValueMapAdapter.java:179) ~[spring-core-6.1.1.jar:6.1.1]
+	at java.base/java.util.Collections$UnmodifiableMap.forEach(Collections.java:1553) ~[na:na]
+	at org.springframework.boot.autoconfigure.condition.AbstractNestedCondition$MemberConditions.getMatchOutcomes(AbstractNestedCondition.java:169) ~[spring-boot-autoconfigure-3.2.0.jar:3.2.0]
+	at org.springframework.boot.autoconfigure.condition.AbstractNestedCondition$MemberMatchOutcomes.<init>(AbstractNestedCondition.java:78) ~[spring-boot-autoconfigure-3.2.0.jar:3.2.0]
+	at org.springframework.boot.autoconfigure.condition.AbstractNestedCondition.getMatchOutcome(AbstractNestedCondition.java:63) ~[spring-boot-autoconfigure-3.2.0.jar:3.2.0]
+	at org.springframework.boot.autoconfigure.condition.SpringBootCondition.matches(SpringBootCondition.java:47) ~[spring-boot-autoconfigure-3.2.0.jar:3.2.0]
+	... 17 common frames omitted
+Caused by: java.lang.NoClassDefFoundError: javax/servlet/Filter
+	at java.base/java.lang.Class.getDeclaredMethods0(Native Method) ~[na:na]
+	at java.base/java.lang.Class.privateGetDeclaredMethods(Class.java:3402) ~[na:na]
+	at java.base/java.lang.Class.getDeclaredMethods(Class.java:2504) ~[na:na]
+	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:465) ~[spring-core-6.1.1.jar:6.1.1]
+	... 42 common frames omitted
+Caused by: java.lang.ClassNotFoundException: javax.servlet.Filter
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:641) ~[na:na]
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:188) ~[na:na]
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:520) ~[na:na]
+	... 46 common frames omitted
+
+2024-02-17T00:16:13.813+03:30  INFO 3240 --- [main] c.e.p.ProjectManagementApplication       : Starting ProjectManagementApplication using Java 17.0.2 with PID 3240 (D:\Mehrdad\Java\IdeaProjects\spring course one\target\classes started by MehRdad in D:\Mehrdad\Java\IdeaProjects\spring course one)
+2024-02-17T00:16:13.817+03:30 DEBUG 3240 --- [main] c.e.p.ProjectManagementApplication       : Running with Spring Boot v3.2.0, Spring v6.1.1
+2024-02-17T00:16:13.818+03:30  INFO 3240 --- [main] c.e.p.ProjectManagementApplication       : The following 1 profile is active: "dev"
+2024-02-17T00:16:15.324+03:30  INFO 3240 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-02-17T00:16:15.433+03:30  INFO 3240 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 96 ms. Found 2 JPA repository interfaces.
+2024-02-17T00:16:15.501+03:30  WARN 3240 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: java.lang.IllegalStateException: Error processing condition on org.springframework.boot.autoconfigure.security.servlet.SpringBootWebSecurityConfiguration$SecurityFilterChainConfiguration
+2024-02-17T00:16:15.517+03:30  INFO 3240 --- [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-02-17T00:16:15.557+03:30 ERROR 3240 --- [main] o.s.boot.SpringApplication               : Application run failed
+
+java.lang.IllegalStateException: Error processing condition on org.springframework.boot.autoconfigure.security.servlet.SpringBootWebSecurityConfiguration$SecurityFilterChainConfiguration
+	at org.springframework.boot.autoconfigure.condition.SpringBootCondition.matches(SpringBootCondition.java:60) ~[spring-boot-autoconfigure-3.2.0.jar:3.2.0]
+	at org.springframework.context.annotation.ConditionEvaluator.shouldSkip(ConditionEvaluator.java:108) ~[spring-context-6.1.1.jar:6.1.1]
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader$TrackedConditionEvaluator.shouldSkip(ConfigurationClassBeanDefinitionReader.java:470) ~[spring-context-6.1.1.jar:6.1.1]
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitionsForConfigurationClass(ConfigurationClassBeanDefinitionReader.java:131) ~[spring-context-6.1.1.jar:6.1.1]
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitions(ConfigurationClassBeanDefinitionReader.java:120) ~[spring-context-6.1.1.jar:6.1.1]
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:428) ~[spring-context-6.1.1.jar:6.1.1]
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:289) ~[spring-context-6.1.1.jar:6.1.1]
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:349) ~[spring-context-6.1.1.jar:6.1.1]
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:118) ~[spring-context-6.1.1.jar:6.1.1]
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:775) ~[spring-context-6.1.1.jar:6.1.1]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:597) ~[spring-context-6.1.1.jar:6.1.1]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.2.0.jar:3.2.0]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:753) ~[spring-boot-3.2.0.jar:3.2.0]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:455) ~[spring-boot-3.2.0.jar:3.2.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:323) ~[spring-boot-3.2.0.jar:3.2.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1342) ~[spring-boot-3.2.0.jar:3.2.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1331) ~[spring-boot-3.2.0.jar:3.2.0]
+	at com.example.projectmanagement.ProjectManagementApplication.main(ProjectManagementApplication.java:12) ~[classes/:na]
+Caused by: java.lang.IllegalStateException: Failed to introspect Class [org.springframework.security.config.annotation.web.configuration.WebSecurityConfiguration] from ClassLoader [jdk.internal.loader.ClassLoaders$AppClassLoader@1d44bcfa]
+	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:483) ~[spring-core-6.1.1.jar:6.1.1]
+	at org.springframework.util.ReflectionUtils.doWithMethods(ReflectionUtils.java:360) ~[spring-core-6.1.1.jar:6.1.1]
+	at org.springframework.util.ReflectionUtils.getUniqueDeclaredMethods(ReflectionUtils.java:417) ~[spring-core-6.1.1.jar:6.1.1]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.lambda$getTypeForFactoryMethod$1(AbstractAutowireCapableBeanFactory.java:751) ~[spring-beans-6.1.1.jar:6.1.1]
+	at java.base/java.util.concurrent.ConcurrentHashMap.computeIfAbsent(ConcurrentHashMap.java:1740) ~[na:na]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.getTypeForFactoryMethod(AbstractAutowireCapableBeanFactory.java:750) ~[spring-beans-6.1.1.jar:6.1.1]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.determineTargetType(AbstractAutowireCapableBeanFactory.java:683) ~[spring-beans-6.1.1.jar:6.1.1]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.predictBeanType(AbstractAutowireCapableBeanFactory.java:654) ~[spring-beans-6.1.1.jar:6.1.1]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.isFactoryBean(AbstractBeanFactory.java:1636) ~[spring-beans-6.1.1.jar:6.1.1]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doGetBeanNamesForType(DefaultListableBeanFactory.java:560) ~[spring-beans-6.1.1.jar:6.1.1]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeanNamesForType(DefaultListableBeanFactory.java:532) ~[spring-beans-6.1.1.jar:6.1.1]
+	at org.springframework.boot.autoconfigure.condition.OnBeanCondition.collectBeanNamesForType(OnBeanCondition.java:247) ~[spring-boot-autoconfigure-3.2.0.jar:3.2.0]
+	at org.springframework.boot.autoconfigure.condition.OnBeanCondition.getBeanNamesForType(OnBeanCondition.java:240) ~[spring-boot-autoconfigure-3.2.0.jar:3.2.0]
+	at org.springframework.boot.autoconfigure.condition.OnBeanCondition.getBeanNamesForType(OnBeanCondition.java:230) ~[spring-boot-autoconfigure-3.2.0.jar:3.2.0]
+	at org.springframework.boot.autoconfigure.condition.OnBeanCondition.getMatchingBeans(OnBeanCondition.java:183) ~[spring-boot-autoconfigure-3.2.0.jar:3.2.0]
+	at org.springframework.boot.autoconfigure.condition.OnBeanCondition.getMatchOutcome(OnBeanCondition.java:158) ~[spring-boot-autoconfigure-3.2.0.jar:3.2.0]
+	at org.springframework.boot.autoconfigure.condition.AbstractNestedCondition$MemberOutcomes.getConditionOutcome(AbstractNestedCondition.java:195) ~[spring-boot-autoconfigure-3.2.0.jar:3.2.0]
+	at org.springframework.boot.autoconfigure.condition.AbstractNestedCondition$MemberOutcomes.<init>(AbstractNestedCondition.java:189) ~[spring-boot-autoconfigure-3.2.0.jar:3.2.0]
+	at org.springframework.boot.autoconfigure.condition.AbstractNestedCondition$MemberConditions.lambda$getMatchOutcomes$0(AbstractNestedCondition.java:169) ~[spring-boot-autoconfigure-3.2.0.jar:3.2.0]
+	at java.base/java.util.LinkedHashMap.forEach(LinkedHashMap.java:721) ~[na:na]
+	at org.springframework.util.MultiValueMapAdapter.forEach(MultiValueMapAdapter.java:179) ~[spring-core-6.1.1.jar:6.1.1]
+	at java.base/java.util.Collections$UnmodifiableMap.forEach(Collections.java:1553) ~[na:na]
+	at org.springframework.boot.autoconfigure.condition.AbstractNestedCondition$MemberConditions.getMatchOutcomes(AbstractNestedCondition.java:169) ~[spring-boot-autoconfigure-3.2.0.jar:3.2.0]
+	at org.springframework.boot.autoconfigure.condition.AbstractNestedCondition$MemberMatchOutcomes.<init>(AbstractNestedCondition.java:78) ~[spring-boot-autoconfigure-3.2.0.jar:3.2.0]
+	at org.springframework.boot.autoconfigure.condition.AbstractNestedCondition.getMatchOutcome(AbstractNestedCondition.java:63) ~[spring-boot-autoconfigure-3.2.0.jar:3.2.0]
+	at org.springframework.boot.autoconfigure.condition.SpringBootCondition.matches(SpringBootCondition.java:47) ~[spring-boot-autoconfigure-3.2.0.jar:3.2.0]
+	... 17 common frames omitted
+Caused by: java.lang.NoClassDefFoundError: javax/servlet/Filter
+	at java.base/java.lang.Class.getDeclaredMethods0(Native Method) ~[na:na]
+	at java.base/java.lang.Class.privateGetDeclaredMethods(Class.java:3402) ~[na:na]
+	at java.base/java.lang.Class.getDeclaredMethods(Class.java:2504) ~[na:na]
+	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:465) ~[spring-core-6.1.1.jar:6.1.1]
+	... 42 common frames omitted
+Caused by: java.lang.ClassNotFoundException: javax.servlet.Filter
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:641) ~[na:na]
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:188) ~[na:na]
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:520) ~[na:na]
+	... 46 common frames omitted
+
+2024-02-17T00:19:24.567+03:30  INFO 9436 --- [main] c.e.p.ProjectManagementApplication       : Starting ProjectManagementApplication using Java 17.0.2 with PID 9436 (D:\Mehrdad\Java\IdeaProjects\spring course one\target\classes started by MehRdad in D:\Mehrdad\Java\IdeaProjects\spring course one)
+2024-02-17T00:19:24.571+03:30 DEBUG 9436 --- [main] c.e.p.ProjectManagementApplication       : Running with Spring Boot v3.2.0, Spring v6.1.1
+2024-02-17T00:19:24.572+03:30  INFO 9436 --- [main] c.e.p.ProjectManagementApplication       : The following 1 profile is active: "dev"
+2024-02-17T00:19:26.031+03:30  INFO 9436 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-02-17T00:19:26.136+03:30  INFO 9436 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 92 ms. Found 2 JPA repository interfaces.
+2024-02-17T00:19:27.136+03:30  INFO 9436 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-02-17T00:19:27.265+03:30  INFO 9436 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2590 ms
+2024-02-17T00:19:28.043+03:30  INFO 9436 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-02-17T00:19:30.309+03:30  INFO 9436 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-02-17T00:19:30.682+03:30  INFO 9436 --- [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-02-17T00:19:30.879+03:30  WARN 9436 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-02-17T00:19:31.615+03:30  INFO 9436 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+2024-02-17T00:19:31.632+03:30  INFO 9436 --- [main] c.e.p.ProjectManagementApplication       : Started ProjectManagementApplication in 8.024 seconds (process running for 9.467)
+2024-02-17T00:19:44.990+03:30  INFO 9436 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-02-17T00:19:44.992+03:30  INFO 9436 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-02-17T00:19:45.588+03:30 DEBUG 9436 --- [http-nio-8080-exec-1] c.e.p.logging.ApplicationLoggerAspect    : 
+ 
+ 
+
+2024-02-17T00:19:45.590+03:30 DEBUG 9436 --- [http-nio-8080-exec-1] c.e.p.logging.ApplicationLoggerAspect    : ********** Before method execution *********
+ com.example.projectmanagement.controllers.HomeController.displayHome () with arguments[s] = [{versionNumber=dev, projectList=[com.example.projectmanagement.entities.Project@46400b95, com.example.projectmanagement.entities.Project@5df1194b, com.example.projectmanagement.entities.Project@72966eae], projectStatusCount=[{"value":1,"label":"NOTSTARTED"},{"value":1,"label":"INPROGRESS"},{"value":1,"label":"COLPLETED"}], employeesListProjectCount=[org.springframework.data.jpa.repository.query.AbstractJpaQuery$TupleConverter$TupleBackedMap@621e6ea1, org.springframework.data.jpa.repository.query.AbstractJpaQuery$TupleConverter$TupleBackedMap@4ae74a29, org.springframework.data.jpa.repository.query.AbstractJpaQuery$TupleConverter$TupleBackedMap@62062c61]}]
+2024-02-17T00:19:45.593+03:30 DEBUG 9436 --- [http-nio-8080-exec-1] c.e.p.logging.ApplicationLoggerAspect    : *********************************************** 
+ 
+ 
+
+2024-02-17T00:20:06.732+03:30 DEBUG 9436 --- [http-nio-8080-exec-3] c.e.p.logging.ApplicationLoggerAspect    : 
+ 
+ 
+
+2024-02-17T00:20:06.732+03:30 DEBUG 9436 --- [http-nio-8080-exec-3] c.e.p.logging.ApplicationLoggerAspect    : ********** Before method execution *********
+ com.example.projectmanagement.controllers.EmployeeController.displayEmployees () with arguments[s] = [{employees=[com.example.projectmanagement.entities.Employee@188736e6, com.example.projectmanagement.entities.Employee@63e5e3, com.example.projectmanagement.entities.Employee@2794e6da]}]
+2024-02-17T00:20:06.733+03:30 DEBUG 9436 --- [http-nio-8080-exec-3] c.e.p.logging.ApplicationLoggerAspect    : *********************************************** 
+ 
+ 
+
+2024-02-17T00:20:06.739+03:30  WARN 9436 --- [http-nio-8080-exec-3] actStandardFragmentInsertionTagProcessor : [THYMELEAF][http-nio-8080-exec-3][employees/employees-list] Deprecated unwrapped fragment expression "layouts :: header" found in template employees/employees-list, line 3, col 7. Please use the complete syntax of fragment expressions instead ("~{layouts :: header}"). The old, unwrapped syntax for fragment expressions will be removed in future versions of Thymeleaf.
+2024-02-17T00:20:08.135+03:30 DEBUG 9436 --- [http-nio-8080-exec-4] c.e.p.logging.ApplicationLoggerAspect    : 
+ 
+ 
+
+2024-02-17T00:20:08.135+03:30 DEBUG 9436 --- [http-nio-8080-exec-4] c.e.p.logging.ApplicationLoggerAspect    : ********** Before method execution *********
+ com.example.projectmanagement.controllers.EmployeeController.displayEmployeeForm () with arguments[s] = [{employee=com.example.projectmanagement.entities.Employee@63671de5}]
+2024-02-17T00:20:08.136+03:30 DEBUG 9436 --- [http-nio-8080-exec-4] c.e.p.logging.ApplicationLoggerAspect    : *********************************************** 
+ 
+ 
+
+2024-02-17T00:20:10.458+03:30 DEBUG 9436 --- [http-nio-8080-exec-5] c.e.p.logging.ApplicationLoggerAspect    : 
+ 
+ 
+
+2024-02-17T00:20:10.458+03:30 DEBUG 9436 --- [http-nio-8080-exec-5] c.e.p.logging.ApplicationLoggerAspect    : ********** Before method execution *********
+ com.example.projectmanagement.controllers.ProjectController.displayProjects () with arguments[s] = [{projects=[com.example.projectmanagement.entities.Project@34f1abc7, com.example.projectmanagement.entities.Project@4858ac4e, com.example.projectmanagement.entities.Project@27dcde56]}]
+2024-02-17T00:20:10.458+03:30 DEBUG 9436 --- [http-nio-8080-exec-5] c.e.p.logging.ApplicationLoggerAspect    : *********************************************** 
+ 
+ 
+
+2024-02-17T00:20:13.104+03:30 DEBUG 9436 --- [http-nio-8080-exec-6] c.e.p.logging.ApplicationLoggerAspect    : 
+ 
+ 
+
+2024-02-17T00:20:13.104+03:30 DEBUG 9436 --- [http-nio-8080-exec-6] c.e.p.logging.ApplicationLoggerAspect    : ********** Before method execution *********
+ com.example.projectmanagement.controllers.EmployeeController.displayEmployees () with arguments[s] = [{employees=[com.example.projectmanagement.entities.Employee@650b9cbd, com.example.projectmanagement.entities.Employee@28db1a95, com.example.projectmanagement.entities.Employee@751c078d]}]
+2024-02-17T00:20:13.105+03:30 DEBUG 9436 --- [http-nio-8080-exec-6] c.e.p.logging.ApplicationLoggerAspect    : *********************************************** 
+ 
+ 
+
+2024-02-17T00:20:13.108+03:30  WARN 9436 --- [http-nio-8080-exec-6] actStandardFragmentInsertionTagProcessor : [THYMELEAF][http-nio-8080-exec-6][employees/employees-list] Deprecated unwrapped fragment expression "layouts :: header" found in template employees/employees-list, line 3, col 7. Please use the complete syntax of fragment expressions instead ("~{layouts :: header}"). The old, unwrapped syntax for fragment expressions will be removed in future versions of Thymeleaf.
+2024-02-17T00:20:15.926+03:30 DEBUG 9436 --- [http-nio-8080-exec-7] c.e.p.logging.ApplicationLoggerAspect    : 
+ 
+ 
+
+2024-02-17T00:20:15.926+03:30 DEBUG 9436 --- [http-nio-8080-exec-7] c.e.p.logging.ApplicationLoggerAspect    : ********** Before method execution *********
+ com.example.projectmanagement.controllers.HomeController.displayHome () with arguments[s] = [{versionNumber=dev, projectList=[com.example.projectmanagement.entities.Project@2fed42d, com.example.projectmanagement.entities.Project@60d456a5, com.example.projectmanagement.entities.Project@6b02a6a], projectStatusCount=[{"value":1,"label":"NOTSTARTED"},{"value":1,"label":"INPROGRESS"},{"value":1,"label":"COLPLETED"}], employeesListProjectCount=[org.springframework.data.jpa.repository.query.AbstractJpaQuery$TupleConverter$TupleBackedMap@2198788, org.springframework.data.jpa.repository.query.AbstractJpaQuery$TupleConverter$TupleBackedMap@7ed7d568, org.springframework.data.jpa.repository.query.AbstractJpaQuery$TupleConverter$TupleBackedMap@d210a94]}]
+2024-02-17T00:20:15.926+03:30 DEBUG 9436 --- [http-nio-8080-exec-7] c.e.p.logging.ApplicationLoggerAspect    : *********************************************** 
+ 
+ 
+
+2024-02-17T00:21:16.427+03:30  INFO 9436 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-02-17T00:21:22.741+03:30  INFO 4616 --- [main] c.e.p.ProjectManagementApplication       : Starting ProjectManagementApplication using Java 17.0.2 with PID 4616 (D:\Mehrdad\Java\IdeaProjects\spring course one\target\classes started by MehRdad in D:\Mehrdad\Java\IdeaProjects\spring course one)
+2024-02-17T00:21:22.745+03:30 DEBUG 4616 --- [main] c.e.p.ProjectManagementApplication       : Running with Spring Boot v3.2.0, Spring v6.1.1
+2024-02-17T00:21:22.746+03:30  INFO 4616 --- [main] c.e.p.ProjectManagementApplication       : The following 1 profile is active: "dev"
+2024-02-17T00:21:24.147+03:30  INFO 4616 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-02-17T00:21:24.240+03:30  INFO 4616 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 79 ms. Found 2 JPA repository interfaces.
+2024-02-17T00:21:25.275+03:30  INFO 4616 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-02-17T00:21:25.407+03:30  INFO 4616 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2561 ms
+2024-02-17T00:21:26.185+03:30  INFO 4616 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-02-17T00:21:28.482+03:30  INFO 4616 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-02-17T00:21:28.886+03:30  INFO 4616 --- [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-02-17T00:21:29.085+03:30  WARN 4616 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-02-17T00:21:29.763+03:30  INFO 4616 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+2024-02-17T00:21:29.778+03:30  INFO 4616 --- [main] c.e.p.ProjectManagementApplication       : Started ProjectManagementApplication in 7.981 seconds (process running for 9.427)
+2024-02-17T00:21:39.508+03:30  INFO 4616 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-02-17T00:21:39.513+03:30  INFO 4616 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 4 ms
+2024-02-17T00:21:39.989+03:30 DEBUG 4616 --- [http-nio-8080-exec-1] c.e.p.logging.ApplicationLoggerAspect    : 
+ 
+ 
+
+2024-02-17T00:21:39.992+03:30 DEBUG 4616 --- [http-nio-8080-exec-1] c.e.p.logging.ApplicationLoggerAspect    : ********** Before method execution *********
+ com.example.projectmanagement.controllers.HomeController.displayHome () with arguments[s] = [{versionNumber=dev, projectList=[com.example.projectmanagement.entities.Project@1bd568b5, com.example.projectmanagement.entities.Project@2b53552c, com.example.projectmanagement.entities.Project@282e583f], projectStatusCount=[{"value":1,"label":"NOTSTARTED"},{"value":1,"label":"INPROGRESS"},{"value":1,"label":"COLPLETED"}], employeesListProjectCount=[org.springframework.data.jpa.repository.query.AbstractJpaQuery$TupleConverter$TupleBackedMap@171a2b0d, org.springframework.data.jpa.repository.query.AbstractJpaQuery$TupleConverter$TupleBackedMap@541cca51, org.springframework.data.jpa.repository.query.AbstractJpaQuery$TupleConverter$TupleBackedMap@47896596]}]
+2024-02-17T00:21:39.995+03:30 DEBUG 4616 --- [http-nio-8080-exec-1] c.e.p.logging.ApplicationLoggerAspect    : *********************************************** 
+ 
+ 
+
+2024-02-17T00:21:49.259+03:30  INFO 4616 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-02-17T00:21:59.597+03:30  INFO 12408 --- [main] c.e.p.ProjectManagementApplication       : Starting ProjectManagementApplication using Java 17.0.2 with PID 12408 (D:\Mehrdad\Java\IdeaProjects\spring course one\target\classes started by MehRdad in D:\Mehrdad\Java\IdeaProjects\spring course one)
+2024-02-17T00:21:59.601+03:30 DEBUG 12408 --- [main] c.e.p.ProjectManagementApplication       : Running with Spring Boot v3.2.0, Spring v6.1.1
+2024-02-17T00:21:59.602+03:30  INFO 12408 --- [main] c.e.p.ProjectManagementApplication       : The following 1 profile is active: "dev"
+2024-02-17T00:22:01.078+03:30  INFO 12408 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-02-17T00:22:01.176+03:30  INFO 12408 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 84 ms. Found 2 JPA repository interfaces.
+2024-02-17T00:22:01.261+03:30  WARN 12408 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: java.lang.IllegalStateException: Error processing condition on org.springframework.boot.autoconfigure.security.servlet.SpringBootWebSecurityConfiguration$SecurityFilterChainConfiguration
+2024-02-17T00:22:01.278+03:30  INFO 12408 --- [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-02-17T00:22:01.320+03:30 ERROR 12408 --- [main] o.s.boot.SpringApplication               : Application run failed
+
+java.lang.IllegalStateException: Error processing condition on org.springframework.boot.autoconfigure.security.servlet.SpringBootWebSecurityConfiguration$SecurityFilterChainConfiguration
+	at org.springframework.boot.autoconfigure.condition.SpringBootCondition.matches(SpringBootCondition.java:60) ~[spring-boot-autoconfigure-3.2.0.jar:3.2.0]
+	at org.springframework.context.annotation.ConditionEvaluator.shouldSkip(ConditionEvaluator.java:108) ~[spring-context-6.1.1.jar:6.1.1]
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader$TrackedConditionEvaluator.shouldSkip(ConfigurationClassBeanDefinitionReader.java:470) ~[spring-context-6.1.1.jar:6.1.1]
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitionsForConfigurationClass(ConfigurationClassBeanDefinitionReader.java:131) ~[spring-context-6.1.1.jar:6.1.1]
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitions(ConfigurationClassBeanDefinitionReader.java:120) ~[spring-context-6.1.1.jar:6.1.1]
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:428) ~[spring-context-6.1.1.jar:6.1.1]
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:289) ~[spring-context-6.1.1.jar:6.1.1]
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:349) ~[spring-context-6.1.1.jar:6.1.1]
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:118) ~[spring-context-6.1.1.jar:6.1.1]
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:775) ~[spring-context-6.1.1.jar:6.1.1]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:597) ~[spring-context-6.1.1.jar:6.1.1]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.2.0.jar:3.2.0]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:753) ~[spring-boot-3.2.0.jar:3.2.0]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:455) ~[spring-boot-3.2.0.jar:3.2.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:323) ~[spring-boot-3.2.0.jar:3.2.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1342) ~[spring-boot-3.2.0.jar:3.2.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1331) ~[spring-boot-3.2.0.jar:3.2.0]
+	at com.example.projectmanagement.ProjectManagementApplication.main(ProjectManagementApplication.java:13) ~[classes/:na]
+Caused by: java.lang.IllegalStateException: Failed to introspect Class [org.springframework.security.config.annotation.web.configuration.WebSecurityConfiguration] from ClassLoader [jdk.internal.loader.ClassLoaders$AppClassLoader@1d44bcfa]
+	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:483) ~[spring-core-6.1.1.jar:6.1.1]
+	at org.springframework.util.ReflectionUtils.doWithMethods(ReflectionUtils.java:360) ~[spring-core-6.1.1.jar:6.1.1]
+	at org.springframework.util.ReflectionUtils.getUniqueDeclaredMethods(ReflectionUtils.java:417) ~[spring-core-6.1.1.jar:6.1.1]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.lambda$getTypeForFactoryMethod$1(AbstractAutowireCapableBeanFactory.java:751) ~[spring-beans-6.1.1.jar:6.1.1]
+	at java.base/java.util.concurrent.ConcurrentHashMap.computeIfAbsent(ConcurrentHashMap.java:1708) ~[na:na]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.getTypeForFactoryMethod(AbstractAutowireCapableBeanFactory.java:750) ~[spring-beans-6.1.1.jar:6.1.1]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.determineTargetType(AbstractAutowireCapableBeanFactory.java:683) ~[spring-beans-6.1.1.jar:6.1.1]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.predictBeanType(AbstractAutowireCapableBeanFactory.java:654) ~[spring-beans-6.1.1.jar:6.1.1]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.isFactoryBean(AbstractBeanFactory.java:1636) ~[spring-beans-6.1.1.jar:6.1.1]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doGetBeanNamesForType(DefaultListableBeanFactory.java:560) ~[spring-beans-6.1.1.jar:6.1.1]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeanNamesForType(DefaultListableBeanFactory.java:532) ~[spring-beans-6.1.1.jar:6.1.1]
+	at org.springframework.boot.autoconfigure.condition.OnBeanCondition.collectBeanNamesForType(OnBeanCondition.java:247) ~[spring-boot-autoconfigure-3.2.0.jar:3.2.0]
+	at org.springframework.boot.autoconfigure.condition.OnBeanCondition.getBeanNamesForType(OnBeanCondition.java:240) ~[spring-boot-autoconfigure-3.2.0.jar:3.2.0]
+	at org.springframework.boot.autoconfigure.condition.OnBeanCondition.getBeanNamesForType(OnBeanCondition.java:230) ~[spring-boot-autoconfigure-3.2.0.jar:3.2.0]
+	at org.springframework.boot.autoconfigure.condition.OnBeanCondition.getMatchingBeans(OnBeanCondition.java:183) ~[spring-boot-autoconfigure-3.2.0.jar:3.2.0]
+	at org.springframework.boot.autoconfigure.condition.OnBeanCondition.getMatchOutcome(OnBeanCondition.java:158) ~[spring-boot-autoconfigure-3.2.0.jar:3.2.0]
+	at org.springframework.boot.autoconfigure.condition.AbstractNestedCondition$MemberOutcomes.getConditionOutcome(AbstractNestedCondition.java:195) ~[spring-boot-autoconfigure-3.2.0.jar:3.2.0]
+	at org.springframework.boot.autoconfigure.condition.AbstractNestedCondition$MemberOutcomes.<init>(AbstractNestedCondition.java:189) ~[spring-boot-autoconfigure-3.2.0.jar:3.2.0]
+	at org.springframework.boot.autoconfigure.condition.AbstractNestedCondition$MemberConditions.lambda$getMatchOutcomes$0(AbstractNestedCondition.java:169) ~[spring-boot-autoconfigure-3.2.0.jar:3.2.0]
+	at java.base/java.util.LinkedHashMap.forEach(LinkedHashMap.java:721) ~[na:na]
+	at org.springframework.util.MultiValueMapAdapter.forEach(MultiValueMapAdapter.java:179) ~[spring-core-6.1.1.jar:6.1.1]
+	at java.base/java.util.Collections$UnmodifiableMap.forEach(Collections.java:1553) ~[na:na]
+	at org.springframework.boot.autoconfigure.condition.AbstractNestedCondition$MemberConditions.getMatchOutcomes(AbstractNestedCondition.java:169) ~[spring-boot-autoconfigure-3.2.0.jar:3.2.0]
+	at org.springframework.boot.autoconfigure.condition.AbstractNestedCondition$MemberMatchOutcomes.<init>(AbstractNestedCondition.java:78) ~[spring-boot-autoconfigure-3.2.0.jar:3.2.0]
+	at org.springframework.boot.autoconfigure.condition.AbstractNestedCondition.getMatchOutcome(AbstractNestedCondition.java:63) ~[spring-boot-autoconfigure-3.2.0.jar:3.2.0]
+	at org.springframework.boot.autoconfigure.condition.SpringBootCondition.matches(SpringBootCondition.java:47) ~[spring-boot-autoconfigure-3.2.0.jar:3.2.0]
+	... 17 common frames omitted
+Caused by: java.lang.NoClassDefFoundError: javax/servlet/Filter
+	at java.base/java.lang.Class.getDeclaredMethods0(Native Method) ~[na:na]
+	at java.base/java.lang.Class.privateGetDeclaredMethods(Class.java:3402) ~[na:na]
+	at java.base/java.lang.Class.getDeclaredMethods(Class.java:2504) ~[na:na]
+	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:465) ~[spring-core-6.1.1.jar:6.1.1]
+	... 42 common frames omitted
+Caused by: java.lang.ClassNotFoundException: javax.servlet.Filter
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:641) ~[na:na]
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:188) ~[na:na]
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:520) ~[na:na]
+	... 46 common frames omitted
+
+2024-02-17T00:22:21.906+03:30  INFO 8332 --- [main] c.e.p.ProjectManagementApplication       : Starting ProjectManagementApplication using Java 17.0.2 with PID 8332 (D:\Mehrdad\Java\IdeaProjects\spring course one\target\classes started by MehRdad in D:\Mehrdad\Java\IdeaProjects\spring course one)
+2024-02-17T00:22:21.910+03:30 DEBUG 8332 --- [main] c.e.p.ProjectManagementApplication       : Running with Spring Boot v3.2.0, Spring v6.1.1
+2024-02-17T00:22:21.913+03:30  INFO 8332 --- [main] c.e.p.ProjectManagementApplication       : The following 1 profile is active: "dev"
+2024-02-17T00:22:23.893+03:30  INFO 8332 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-02-17T00:22:24.056+03:30  INFO 8332 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 134 ms. Found 2 JPA repository interfaces.
+2024-02-17T00:22:25.744+03:30  INFO 8332 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-02-17T00:22:25.921+03:30  INFO 8332 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3882 ms
+2024-02-17T00:22:26.883+03:30  INFO 8332 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-02-17T00:22:29.708+03:30  INFO 8332 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-02-17T00:22:30.153+03:30  INFO 8332 --- [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-02-17T00:22:30.406+03:30  WARN 8332 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-02-17T00:22:31.212+03:30  INFO 8332 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+2024-02-17T00:22:31.229+03:30  INFO 8332 --- [main] c.e.p.ProjectManagementApplication       : Started ProjectManagementApplication in 10.478 seconds (process running for 13.417)
+2024-02-17T00:27:05.512+03:30  INFO 8332 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-02-17T00:27:15.525+03:30  INFO 12976 --- [main] c.e.p.ProjectManagementApplication       : Starting ProjectManagementApplication using Java 17.0.2 with PID 12976 (D:\Mehrdad\Java\IdeaProjects\spring course one\target\classes started by MehRdad in D:\Mehrdad\Java\IdeaProjects\spring course one)
+2024-02-17T00:27:15.529+03:30 DEBUG 12976 --- [main] c.e.p.ProjectManagementApplication       : Running with Spring Boot v3.2.0, Spring v6.1.1
+2024-02-17T00:27:15.531+03:30  INFO 12976 --- [main] c.e.p.ProjectManagementApplication       : The following 1 profile is active: "dev"
+2024-02-17T00:27:16.777+03:30  WARN 12976 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: java.lang.IllegalStateException: Error processing condition on org.springframework.boot.autoconfigure.context.PropertyPlaceholderAutoConfiguration.propertySourcesPlaceholderConfigurer
+2024-02-17T00:27:16.798+03:30  INFO 12976 --- [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-02-17T00:27:16.848+03:30 ERROR 12976 --- [main] o.s.boot.SpringApplication               : Application run failed
+
+java.lang.IllegalStateException: Error processing condition on org.springframework.boot.autoconfigure.context.PropertyPlaceholderAutoConfiguration.propertySourcesPlaceholderConfigurer
+	at org.springframework.boot.autoconfigure.condition.SpringBootCondition.matches(SpringBootCondition.java:60) ~[spring-boot-autoconfigure-3.2.0.jar:3.2.0]
+	at org.springframework.context.annotation.ConditionEvaluator.shouldSkip(ConditionEvaluator.java:108) ~[spring-context-6.1.1.jar:6.1.1]
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitionsForBeanMethod(ConfigurationClassBeanDefinitionReader.java:183) ~[spring-context-6.1.1.jar:6.1.1]
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitionsForConfigurationClass(ConfigurationClassBeanDefinitionReader.java:144) ~[spring-context-6.1.1.jar:6.1.1]
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitions(ConfigurationClassBeanDefinitionReader.java:120) ~[spring-context-6.1.1.jar:6.1.1]
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:428) ~[spring-context-6.1.1.jar:6.1.1]
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:289) ~[spring-context-6.1.1.jar:6.1.1]
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:349) ~[spring-context-6.1.1.jar:6.1.1]
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:118) ~[spring-context-6.1.1.jar:6.1.1]
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:775) ~[spring-context-6.1.1.jar:6.1.1]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:597) ~[spring-context-6.1.1.jar:6.1.1]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.2.0.jar:3.2.0]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:753) ~[spring-boot-3.2.0.jar:3.2.0]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:455) ~[spring-boot-3.2.0.jar:3.2.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:323) ~[spring-boot-3.2.0.jar:3.2.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1342) ~[spring-boot-3.2.0.jar:3.2.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1331) ~[spring-boot-3.2.0.jar:3.2.0]
+	at com.example.projectmanagement.ProjectManagementApplication.main(ProjectManagementApplication.java:12) ~[classes/:na]
+Caused by: java.lang.IllegalStateException: Failed to introspect Class [org.springframework.security.config.annotation.web.configuration.WebSecurityConfiguration] from ClassLoader [jdk.internal.loader.ClassLoaders$AppClassLoader@1d44bcfa]
+	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:483) ~[spring-core-6.1.1.jar:6.1.1]
+	at org.springframework.util.ReflectionUtils.doWithMethods(ReflectionUtils.java:360) ~[spring-core-6.1.1.jar:6.1.1]
+	at org.springframework.util.ReflectionUtils.getUniqueDeclaredMethods(ReflectionUtils.java:417) ~[spring-core-6.1.1.jar:6.1.1]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.lambda$getTypeForFactoryMethod$1(AbstractAutowireCapableBeanFactory.java:751) ~[spring-beans-6.1.1.jar:6.1.1]
+	at java.base/java.util.concurrent.ConcurrentHashMap.computeIfAbsent(ConcurrentHashMap.java:1708) ~[na:na]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.getTypeForFactoryMethod(AbstractAutowireCapableBeanFactory.java:750) ~[spring-beans-6.1.1.jar:6.1.1]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.determineTargetType(AbstractAutowireCapableBeanFactory.java:683) ~[spring-beans-6.1.1.jar:6.1.1]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.predictBeanType(AbstractAutowireCapableBeanFactory.java:654) ~[spring-beans-6.1.1.jar:6.1.1]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.isFactoryBean(AbstractBeanFactory.java:1636) ~[spring-beans-6.1.1.jar:6.1.1]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doGetBeanNamesForType(DefaultListableBeanFactory.java:560) ~[spring-beans-6.1.1.jar:6.1.1]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeanNamesForType(DefaultListableBeanFactory.java:532) ~[spring-beans-6.1.1.jar:6.1.1]
+	at org.springframework.boot.autoconfigure.condition.OnBeanCondition.collectBeanNamesForType(OnBeanCondition.java:247) ~[spring-boot-autoconfigure-3.2.0.jar:3.2.0]
+	at org.springframework.boot.autoconfigure.condition.OnBeanCondition.getBeanNamesForType(OnBeanCondition.java:240) ~[spring-boot-autoconfigure-3.2.0.jar:3.2.0]
+	at org.springframework.boot.autoconfigure.condition.OnBeanCondition.getBeanNamesForType(OnBeanCondition.java:230) ~[spring-boot-autoconfigure-3.2.0.jar:3.2.0]
+	at org.springframework.boot.autoconfigure.condition.OnBeanCondition.getMatchingBeans(OnBeanCondition.java:183) ~[spring-boot-autoconfigure-3.2.0.jar:3.2.0]
+	at org.springframework.boot.autoconfigure.condition.OnBeanCondition.getMatchOutcome(OnBeanCondition.java:158) ~[spring-boot-autoconfigure-3.2.0.jar:3.2.0]
+	at org.springframework.boot.autoconfigure.condition.SpringBootCondition.matches(SpringBootCondition.java:47) ~[spring-boot-autoconfigure-3.2.0.jar:3.2.0]
+	... 17 common frames omitted
+Caused by: java.lang.NoClassDefFoundError: javax/servlet/Filter
+	at java.base/java.lang.Class.getDeclaredMethods0(Native Method) ~[na:na]
+	at java.base/java.lang.Class.privateGetDeclaredMethods(Class.java:3402) ~[na:na]
+	at java.base/java.lang.Class.getDeclaredMethods(Class.java:2504) ~[na:na]
+	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:465) ~[spring-core-6.1.1.jar:6.1.1]
+	... 33 common frames omitted
+Caused by: java.lang.ClassNotFoundException: javax.servlet.Filter
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:641) ~[na:na]
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:188) ~[na:na]
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:520) ~[na:na]
+	... 37 common frames omitted
+
