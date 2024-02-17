@@ -626,3 +626,29 @@ Caused by: java.lang.ClassNotFoundException: javax.servlet.Filter
 	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:520) ~[na:na]
 	... 37 common frames omitted
 
+2024-02-17T00:29:16.760+03:30  INFO 6280 --- [main] c.e.p.ProjectManagementApplication       : Starting ProjectManagementApplication using Java 17.0.2 with PID 6280 (D:\Mehrdad\Java\IdeaProjects\spring course one\target\classes started by MehRdad in D:\Mehrdad\Java\IdeaProjects\spring course one)
+2024-02-17T00:29:16.764+03:30 DEBUG 6280 --- [main] c.e.p.ProjectManagementApplication       : Running with Spring Boot v3.2.0, Spring v6.1.1
+2024-02-17T00:29:16.765+03:30  INFO 6280 --- [main] c.e.p.ProjectManagementApplication       : The following 1 profile is active: "dev"
+2024-02-17T00:29:18.213+03:30  INFO 6280 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-02-17T00:29:18.305+03:30  INFO 6280 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 80 ms. Found 2 JPA repository interfaces.
+2024-02-17T00:29:19.277+03:30  INFO 6280 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-02-17T00:29:19.406+03:30  INFO 6280 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2537 ms
+2024-02-17T00:29:20.188+03:30  INFO 6280 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-02-17T00:29:22.433+03:30  INFO 6280 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-02-17T00:29:22.820+03:30  INFO 6280 --- [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-02-17T00:29:23.022+03:30  WARN 6280 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-02-17T00:29:23.730+03:30  INFO 6280 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+2024-02-17T00:29:23.750+03:30  INFO 6280 --- [main] c.e.p.ProjectManagementApplication       : Started ProjectManagementApplication in 7.898 seconds (process running for 9.392)
+2024-02-17T00:29:32.108+03:30  INFO 6280 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-02-17T00:29:32.111+03:30  INFO 6280 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2024-02-17T00:29:32.705+03:30 DEBUG 6280 --- [http-nio-8080-exec-1] c.e.p.logging.ApplicationLoggerAspect    : 
+ 
+ 
+
+2024-02-17T00:29:32.708+03:30 DEBUG 6280 --- [http-nio-8080-exec-1] c.e.p.logging.ApplicationLoggerAspect    : ********** Before method execution *********
+ com.example.projectmanagement.controllers.HomeController.displayHome () with arguments[s] = [{versionNumber=dev, projectList=[com.example.projectmanagement.entities.Project@bbd3124, com.example.projectmanagement.entities.Project@720e4558, com.example.projectmanagement.entities.Project@1047659d], projectStatusCount=[{"value":1,"label":"NOTSTARTED"},{"value":1,"label":"INPROGRESS"},{"value":1,"label":"COLPLETED"}], employeesListProjectCount=[org.springframework.data.jpa.repository.query.AbstractJpaQuery$TupleConverter$TupleBackedMap@35c626c, org.springframework.data.jpa.repository.query.AbstractJpaQuery$TupleConverter$TupleBackedMap@a65124f, org.springframework.data.jpa.repository.query.AbstractJpaQuery$TupleConverter$TupleBackedMap@59912bec]}]
+2024-02-17T00:29:32.714+03:30 DEBUG 6280 --- [http-nio-8080-exec-1] c.e.p.logging.ApplicationLoggerAspect    : *********************************************** 
+ 
+ 
+
+2024-02-17T00:30:44.296+03:30  INFO 6280 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'

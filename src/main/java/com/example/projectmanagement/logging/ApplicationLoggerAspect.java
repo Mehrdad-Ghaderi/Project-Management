@@ -23,7 +23,7 @@ public class ApplicationLoggerAspect {
 
     }
 
-    @After("definedPackagedPointcuts()") //this what is done
+    @After("definedPackagedPointcuts()") //this is what is done
     public void logAfter(JoinPoint joinPoint) {
         logger.debug("\n \n \n");
         logger.debug("********** Before method execution *********\n {}.{} () with arguments[s] = {}",
