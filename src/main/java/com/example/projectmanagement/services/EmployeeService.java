@@ -27,5 +27,8 @@ public class EmployeeService {
     }
 
 
-
+    public Employee findById(String id) {
+        Long foundId = Long.parseLong(id);
+        return employeeRepository.findById(foundId).get();
+    }
 }
