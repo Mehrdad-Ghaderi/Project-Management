@@ -1,5 +1,6 @@
 package com.example.projectmanagement.entities;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import java.util.List;
 
@@ -17,7 +18,7 @@ public class Employee {
     @JoinTable(name = "project_employee",
             joinColumns = @JoinColumn(name = "employee_id"),
             inverseJoinColumns = @JoinColumn(name = "project_id"))
-
+    @JsonIgnore //ignores this field for serialization
     private List<Project> projects;
 
     public Employee() {

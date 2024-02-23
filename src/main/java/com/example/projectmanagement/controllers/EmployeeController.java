@@ -29,7 +29,7 @@ public class EmployeeController {
 
     @GetMapping("/list")
     public String displayEmployees(Model model) {
-        var employees = employeeService.getAll();
+        var employees = employeeService.findAll();
         model.addAttribute("employees", employees);
         return "employees/employees-list";
     }

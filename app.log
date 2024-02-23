@@ -1,77 +1,20 @@
-2024-02-20T20:01:03.951+03:30  INFO 14128 --- [main] c.e.p.ProjectManagementApplication       : Starting ProjectManagementApplication using Java 17.0.2 with PID 14128 (D:\Mehrdad\Java\IdeaProjects\spring course one\target\classes started by MehRdad in D:\Mehrdad\Java\IdeaProjects\spring course one)
-2024-02-20T20:01:03.969+03:30 DEBUG 14128 --- [main] c.e.p.ProjectManagementApplication       : Running with Spring Boot v3.2.0, Spring v6.1.1
-2024-02-20T20:01:03.971+03:30  INFO 14128 --- [main] c.e.p.ProjectManagementApplication       : The following 1 profile is active: "dev"
-2024-02-20T20:01:05.837+03:30  INFO 14128 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-02-20T20:01:05.992+03:30  INFO 14128 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 128 ms. Found 2 JPA repository interfaces.
-2024-02-20T20:01:07.446+03:30  INFO 14128 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
-2024-02-20T20:01:07.611+03:30  INFO 14128 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3507 ms
-2024-02-20T20:01:08.613+03:30  INFO 14128 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2024-02-20T20:01:11.814+03:30  INFO 14128 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-02-20T20:01:12.314+03:30  INFO 14128 --- [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
-2024-02-20T20:01:12.574+03:30  WARN 14128 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2024-02-20T20:01:13.412+03:30  INFO 14128 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
-2024-02-20T20:01:13.429+03:30  INFO 14128 --- [main] c.e.p.ProjectManagementApplication       : Started ProjectManagementApplication in 10.611 seconds (process running for 12.374)
-2024-02-20T20:01:23.721+03:30  INFO 14128 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2024-02-20T20:01:23.724+03:30  INFO 14128 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
-2024-02-20T20:01:25.163+03:30 DEBUG 14128 --- [http-nio-8080-exec-1] c.e.p.logging.ApplicationLoggerAspect    : 
- 
- 
-
-2024-02-20T20:01:25.167+03:30 DEBUG 14128 --- [http-nio-8080-exec-1] c.e.p.logging.ApplicationLoggerAspect    : ********** Before method execution *********
- com.example.projectmanagement.controllers.HomeController.displayHome () with arguments[s] = [{versionNumber=dev, projectList=[com.example.projectmanagement.entities.Project@670e1d59, com.example.projectmanagement.entities.Project@2e22debb, com.example.projectmanagement.entities.Project@5a535646], projectStatusCount=[{"value":1,"label":"NOTSTARTED"},{"value":1,"label":"INPROGRESS"},{"value":1,"label":"COLPLETED"}], employeesListProjectCount=[org.springframework.data.jpa.repository.query.AbstractJpaQuery$TupleConverter$TupleBackedMap@2e5cdca0, org.springframework.data.jpa.repository.query.AbstractJpaQuery$TupleConverter$TupleBackedMap@72f85392, org.springframework.data.jpa.repository.query.AbstractJpaQuery$TupleConverter$TupleBackedMap@210bcaef]}]
-2024-02-20T20:01:25.172+03:30 DEBUG 14128 --- [http-nio-8080-exec-1] c.e.p.logging.ApplicationLoggerAspect    : *********************************************** 
- 
- 
-
-2024-02-20T20:01:31.112+03:30 DEBUG 14128 --- [http-nio-8080-exec-2] c.e.p.logging.ApplicationLoggerAspect    : 
- 
- 
-
-2024-02-20T20:01:31.113+03:30 DEBUG 14128 --- [http-nio-8080-exec-2] c.e.p.logging.ApplicationLoggerAspect    : ********** Before method execution *********
- com.example.projectmanagement.controllers.ProjectController.displayProjects () with arguments[s] = [{projects=[com.example.projectmanagement.entities.Project@2fa626d6, com.example.projectmanagement.entities.Project@4e2ac3b, com.example.projectmanagement.entities.Project@1b6d2918]}]
-2024-02-20T20:01:31.113+03:30 DEBUG 14128 --- [http-nio-8080-exec-2] c.e.p.logging.ApplicationLoggerAspect    : *********************************************** 
- 
- 
-
-2024-02-20T20:01:32.903+03:30 DEBUG 14128 --- [http-nio-8080-exec-3] c.e.p.logging.ApplicationLoggerAspect    : 
- 
- 
-
-2024-02-20T20:01:32.906+03:30 DEBUG 14128 --- [http-nio-8080-exec-3] c.e.p.logging.ApplicationLoggerAspect    : ********** Before method execution *********
- com.example.projectmanagement.controllers.EmployeeController.displayEmployees () with arguments[s] = [{employees=[com.example.projectmanagement.entities.Employee@5325d9f3, com.example.projectmanagement.entities.Employee@5ac10862, com.example.projectmanagement.entities.Employee@576b6667]}]
-2024-02-20T20:01:32.907+03:30 DEBUG 14128 --- [http-nio-8080-exec-3] c.e.p.logging.ApplicationLoggerAspect    : *********************************************** 
- 
- 
-
-2024-02-20T20:01:32.927+03:30  WARN 14128 --- [http-nio-8080-exec-3] actStandardFragmentInsertionTagProcessor : [THYMELEAF][http-nio-8080-exec-3][employees/employees-list] Deprecated unwrapped fragment expression "layouts :: header" found in template employees/employees-list, line 3, col 7. Please use the complete syntax of fragment expressions instead ("~{layouts :: header}"). The old, unwrapped syntax for fragment expressions will be removed in future versions of Thymeleaf.
-2024-02-20T20:01:34.013+03:30 DEBUG 14128 --- [http-nio-8080-exec-4] c.e.p.logging.ApplicationLoggerAspect    : 
- 
- 
-
-2024-02-20T20:01:34.014+03:30 DEBUG 14128 --- [http-nio-8080-exec-4] c.e.p.logging.ApplicationLoggerAspect    : ********** Before method execution *********
- com.example.projectmanagement.controllers.HomeController.displayHome () with arguments[s] = [{versionNumber=dev, projectList=[com.example.projectmanagement.entities.Project@7eeebcd2, com.example.projectmanagement.entities.Project@256dd50d, com.example.projectmanagement.entities.Project@7aa0a68d], projectStatusCount=[{"value":1,"label":"NOTSTARTED"},{"value":1,"label":"INPROGRESS"},{"value":1,"label":"COLPLETED"}], employeesListProjectCount=[org.springframework.data.jpa.repository.query.AbstractJpaQuery$TupleConverter$TupleBackedMap@3f7cda6c, org.springframework.data.jpa.repository.query.AbstractJpaQuery$TupleConverter$TupleBackedMap@7386bcc3, org.springframework.data.jpa.repository.query.AbstractJpaQuery$TupleConverter$TupleBackedMap@1f0295]}]
-2024-02-20T20:01:34.014+03:30 DEBUG 14128 --- [http-nio-8080-exec-4] c.e.p.logging.ApplicationLoggerAspect    : *********************************************** 
- 
- 
-
-2024-02-20T20:01:44.327+03:30  INFO 14128 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2024-02-20T20:01:54.773+03:30  INFO 3900 --- [main] c.e.p.ProjectManagementApplication       : Starting ProjectManagementApplication using Java 17.0.2 with PID 3900 (D:\Mehrdad\Java\IdeaProjects\spring course one\target\classes started by MehRdad in D:\Mehrdad\Java\IdeaProjects\spring course one)
-2024-02-20T20:01:54.777+03:30 DEBUG 3900 --- [main] c.e.p.ProjectManagementApplication       : Running with Spring Boot v3.2.0, Spring v6.1.1
-2024-02-20T20:01:54.778+03:30  INFO 3900 --- [main] c.e.p.ProjectManagementApplication       : The following 1 profile is active: "dev"
-2024-02-20T20:01:56.371+03:30  INFO 3900 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-02-20T20:01:56.505+03:30  INFO 3900 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 114 ms. Found 2 JPA repository interfaces.
-2024-02-20T20:01:57.664+03:30  INFO 3900 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
-2024-02-20T20:01:57.807+03:30  INFO 3900 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2912 ms
-2024-02-20T20:01:58.693+03:30  INFO 3900 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2024-02-20T20:02:01.192+03:30  INFO 3900 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-02-20T20:02:01.604+03:30  INFO 3900 --- [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
-2024-02-20T20:02:01.828+03:30  WARN 3900 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2024-02-20T20:02:02.746+03:30  WARN 3900 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'springSecurityFilterChain' defined in class path resource [org/springframework/security/config/annotation/web/configuration/WebSecurityConfiguration.class]: Failed to instantiate [javax.servlet.Filter]: Factory method 'springSecurityFilterChain' threw exception with message: class org.springframework.security.web.csrf.CsrfFilter cannot be cast to class javax.servlet.Filter (org.springframework.security.web.csrf.CsrfFilter and javax.servlet.Filter are in unnamed module of loader 'app')
-2024-02-20T20:02:02.749+03:30  INFO 3900 --- [main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2024-02-20T20:02:02.793+03:30  INFO 3900 --- [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+2024-02-23T16:38:28.350+03:30  INFO 3236 --- [main] c.e.p.ProjectManagementApplication       : Starting ProjectManagementApplication using Java 17.0.2 with PID 3236 (D:\Mehrdad\Java\IdeaProjects\spring course one\target\classes started by MehRdad in D:\Mehrdad\Java\IdeaProjects\spring course one)
+2024-02-23T16:38:28.369+03:30 DEBUG 3236 --- [main] c.e.p.ProjectManagementApplication       : Running with Spring Boot v3.2.0, Spring v6.1.1
+2024-02-23T16:38:28.382+03:30  INFO 3236 --- [main] c.e.p.ProjectManagementApplication       : The following 1 profile is active: "dev"
+2024-02-23T16:38:30.175+03:30  INFO 3236 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-02-23T16:38:30.312+03:30  INFO 3236 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 115 ms. Found 2 JPA repository interfaces.
+2024-02-23T16:38:31.511+03:30  INFO 3236 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-02-23T16:38:31.667+03:30  INFO 3236 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3145 ms
+2024-02-23T16:38:32.667+03:30  INFO 3236 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-02-23T16:38:38.385+03:30  INFO 3236 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-02-23T16:38:38.806+03:30  INFO 3236 --- [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-02-23T16:38:39.023+03:30  WARN 3236 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-02-23T16:38:40.017+03:30  WARN 3236 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'springSecurityFilterChain' defined in class path resource [org/springframework/security/config/annotation/web/configuration/WebSecurityConfiguration.class]: Failed to instantiate [javax.servlet.Filter]: Factory method 'springSecurityFilterChain' threw exception with message: class org.springframework.security.web.csrf.CsrfFilter cannot be cast to class javax.servlet.Filter (org.springframework.security.web.csrf.CsrfFilter and javax.servlet.Filter are in unnamed module of loader 'app')
+2024-02-23T16:38:40.021+03:30  INFO 3236 --- [main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-02-23T16:38:40.076+03:30  INFO 3236 --- [main] .s.b.a.l.ConditionEvaluationReportLogger : 
 
 Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
-2024-02-20T20:02:02.822+03:30 ERROR 3900 --- [main] o.s.boot.SpringApplication               : Application run failed
+2024-02-23T16:38:40.102+03:30 ERROR 3236 --- [main] o.s.boot.SpringApplication               : Application run failed
 
 org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'springSecurityFilterChain' defined in class path resource [org/springframework/security/config/annotation/web/configuration/WebSecurityConfiguration.class]: Failed to instantiate [javax.servlet.Filter]: Factory method 'springSecurityFilterChain' threw exception with message: class org.springframework.security.web.csrf.CsrfFilter cannot be cast to class javax.servlet.Filter (org.springframework.security.web.csrf.CsrfFilter and javax.servlet.Filter are in unnamed module of loader 'app')
 	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:655) ~[spring-beans-6.1.1.jar:6.1.1]

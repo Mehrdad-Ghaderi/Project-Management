@@ -25,7 +25,7 @@ public class ProjectController {
 
     @GetMapping("/new")
     public String displayProjectForm(Model model) {
-        List<Employee> employees = employeeService.getAll();
+        List<Employee> employees = employeeService.findAll();
         model.addAttribute("project", new Project());
         model.addAttribute("employees", employees);
         return "projects/new-project";

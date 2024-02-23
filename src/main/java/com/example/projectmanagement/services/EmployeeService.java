@@ -18,13 +18,14 @@ public class EmployeeService {
         return employeeRepository.save(employee);
     }
 
-    public List<Employee> getAll() {
+    public List<Employee> findAll() {
         return employeeRepository.findAll();
     }
 
     public List<EmployeeProject> getEmployeeProjects() {
         return employeeRepository.getEmployeeProjects();
     }
+
 
 
 }
