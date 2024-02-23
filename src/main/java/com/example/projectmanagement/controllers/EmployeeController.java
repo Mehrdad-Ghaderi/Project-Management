@@ -24,7 +24,6 @@ public class EmployeeController {
     @PostMapping("/save")
     public String createEmployee(Employee employee, Model model) {
         employeeService.save(employee);
-
         return "redirect:/employees/list";
     }
 
