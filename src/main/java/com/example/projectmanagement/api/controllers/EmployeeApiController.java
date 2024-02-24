@@ -3,10 +3,8 @@ package com.example.projectmanagement.api.controllers;
 import com.example.projectmanagement.entities.Employee;
 import com.example.projectmanagement.services.EmployeeService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.http.HttpStatus;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -24,5 +22,18 @@ public class EmployeeApiController {
     @GetMapping("/{id}")
     public Employee getEmployeeById(@PathVariable("id") String id) {
         return employeeService.findById(id);
+    }
+
+    @PostMapping(consumes = "application/json")  //it consumes a json
+    //@ResponseStatus(HttpStatus.CREATED) //to change the code eg. 200 400 500 to 201, 401 ...
+    public Employee create(@RequestBody Employee employee) { //in the body there will be an employee
+        return employeeService.save(employee);
+    }
+
+    @PutMapping(path = "/{id}", consumes = "application/json")
+    //consume is not necessary, Spring is smart enough to know we are dealing with a JSON
+    @ResponseStatus(HttpStatus.OK)
+    public void update(@RequestBody Employee employee) {
+        employeeService.save(employee);
     }
 }
