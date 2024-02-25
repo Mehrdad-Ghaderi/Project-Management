@@ -3,6 +3,7 @@ package com.example.projectmanagement.api.controllers;
 import com.example.projectmanagement.entities.Employee;
 import com.example.projectmanagement.services.EmployeeService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
@@ -36,4 +37,15 @@ public class EmployeeApiController {
     public void update(@RequestBody Employee employee) {
         employeeService.save(employee);
     }
+
+    @DeleteMapping("/{id}")
+    @ResponseStatus(HttpStatus.NO_CONTENT)
+    public void delete(@PathVariable("id") String id) {
+        try {
+            employeeService.deleteById(id);
+        } catch (EmptyResultDataAccessException e) {
+            e.printStackTrace();
+        }
+    }
+
 }

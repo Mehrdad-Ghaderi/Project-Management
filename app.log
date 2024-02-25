@@ -1,60 +1,105 @@
-2024-02-24T14:40:46.993+03:30  INFO 10928 --- [main] c.e.p.ProjectManagementApplication       : Starting ProjectManagementApplication using Java 17.0.2 with PID 10928 (D:\Mehrdad\Java\IdeaProjects\spring course one\target\classes started by MehRdad in D:\Mehrdad\Java\IdeaProjects\spring course one)
-2024-02-24T14:40:47.001+03:30 DEBUG 10928 --- [main] c.e.p.ProjectManagementApplication       : Running with Spring Boot v3.2.0, Spring v6.1.1
-2024-02-24T14:40:47.009+03:30  INFO 10928 --- [main] c.e.p.ProjectManagementApplication       : The following 1 profile is active: "dev"
-2024-02-24T14:40:48.765+03:30  INFO 10928 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-02-24T14:40:48.905+03:30  INFO 10928 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 118 ms. Found 2 JPA repository interfaces.
-2024-02-24T14:40:50.084+03:30  INFO 10928 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
-2024-02-24T14:40:50.238+03:30  INFO 10928 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3033 ms
-2024-02-24T14:40:51.239+03:30  INFO 10928 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2024-02-24T14:40:53.915+03:30  INFO 10928 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-02-24T14:40:54.370+03:30  INFO 10928 --- [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
-2024-02-24T14:40:54.658+03:30  WARN 10928 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2024-02-24T14:40:55.518+03:30  INFO 10928 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
-2024-02-24T14:40:55.534+03:30  INFO 10928 --- [main] c.e.p.ProjectManagementApplication       : Started ProjectManagementApplication in 9.886 seconds (process running for 12.346)
-2024-02-24T14:41:13.619+03:30  INFO 10928 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2024-02-24T14:41:13.623+03:30  INFO 10928 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
-2024-02-24T14:41:14.389+03:30 DEBUG 10928 --- [http-nio-8080-exec-1] c.e.p.logging.ApplicationLoggerAspect    : 
+2024-02-25T16:25:04.598+03:30  INFO 10796 --- [main] c.e.p.ProjectManagementApplication       : Starting ProjectManagementApplication using Java 17.0.2 with PID 10796 (D:\Mehrdad\Java\IdeaProjects\spring course one\target\classes started by MehRdad in D:\Mehrdad\Java\IdeaProjects\spring course one)
+2024-02-25T16:25:04.614+03:30 DEBUG 10796 --- [main] c.e.p.ProjectManagementApplication       : Running with Spring Boot v3.2.0, Spring v6.1.1
+2024-02-25T16:25:04.618+03:30  INFO 10796 --- [main] c.e.p.ProjectManagementApplication       : The following 1 profile is active: "dev"
+2024-02-25T16:25:09.122+03:30  INFO 10796 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-02-25T16:25:09.574+03:30  INFO 10796 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 398 ms. Found 2 JPA repository interfaces.
+2024-02-25T16:25:12.505+03:30  INFO 10796 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-02-25T16:25:13.169+03:30  INFO 10796 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 8339 ms
+2024-02-25T16:25:20.762+03:30  INFO 10796 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-02-25T16:25:26.101+03:30  INFO 10796 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-02-25T16:25:26.872+03:30  INFO 10796 --- [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-02-25T16:25:27.390+03:30  WARN 10796 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-02-25T16:25:29.243+03:30  INFO 10796 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+2024-02-25T16:25:29.275+03:30  INFO 10796 --- [main] c.e.p.ProjectManagementApplication       : Started ProjectManagementApplication in 26.157 seconds (process running for 29.005)
+2024-02-25T16:25:29.322+03:30  INFO 10796 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-02-25T16:25:51.704+03:30  INFO 1852 --- [main] c.e.p.ProjectManagementApplication       : Starting ProjectManagementApplication using Java 17.0.2 with PID 1852 (D:\Mehrdad\Java\IdeaProjects\spring course one\target\classes started by MehRdad in D:\Mehrdad\Java\IdeaProjects\spring course one)
+2024-02-25T16:25:51.707+03:30 DEBUG 1852 --- [main] c.e.p.ProjectManagementApplication       : Running with Spring Boot v3.2.0, Spring v6.1.1
+2024-02-25T16:25:51.709+03:30  INFO 1852 --- [main] c.e.p.ProjectManagementApplication       : The following 1 profile is active: "dev"
+2024-02-25T16:25:53.229+03:30  INFO 1852 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-02-25T16:25:53.346+03:30  INFO 1852 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 97 ms. Found 2 JPA repository interfaces.
+2024-02-25T16:25:54.414+03:30  INFO 1852 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-02-25T16:25:54.549+03:30  INFO 1852 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2719 ms
+2024-02-25T16:25:55.399+03:30  INFO 1852 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-02-25T16:25:57.879+03:30  INFO 1852 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-02-25T16:25:58.317+03:30  INFO 1852 --- [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-02-25T16:25:58.539+03:30  WARN 1852 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-02-25T16:25:59.326+03:30  INFO 1852 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+2024-02-25T16:25:59.345+03:30  INFO 1852 --- [main] c.e.p.ProjectManagementApplication       : Started ProjectManagementApplication in 8.561 seconds (process running for 10.043)
+2024-02-25T16:26:04.781+03:30  INFO 1852 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-02-25T16:26:04.785+03:30  INFO 1852 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2024-02-25T16:27:58.922+03:30  WARN 1852 --- [http-nio-8080-exec-4] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpMediaTypeNotSupportedException: Content-Type is not supported]
+2024-02-25T16:28:36.131+03:30  WARN 1852 --- [http-nio-8080-exec-5] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpMediaTypeNotSupportedException: Content-Type is not supported]
+2024-02-25T16:28:38.233+03:30  WARN 1852 --- [http-nio-8080-exec-7] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpMediaTypeNotSupportedException: Content-Type is not supported]
+2024-02-25T16:28:39.201+03:30  WARN 1852 --- [http-nio-8080-exec-9] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpMediaTypeNotSupportedException: Content-Type is not supported]
+2024-02-25T16:28:39.956+03:30  WARN 1852 --- [http-nio-8080-exec-1] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpMediaTypeNotSupportedException: Content-Type is not supported]
+2024-02-25T16:29:18.654+03:30  WARN 1852 --- [http-nio-8080-exec-4] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpMediaTypeNotSupportedException: Content-Type is not supported]
+2024-02-25T16:29:34.747+03:30  WARN 1852 --- [http-nio-8080-exec-5] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpMediaTypeNotSupportedException: Content-Type is not supported]
+2024-02-25T16:29:45.479+03:30  WARN 1852 --- [http-nio-8080-exec-7] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpMediaTypeNotSupportedException: Content-Type is not supported]
+2024-02-25T16:30:57.587+03:30  WARN 1852 --- [http-nio-8080-exec-9] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'POST' is not supported]
+2024-02-25T16:32:57.773+03:30  WARN 1852 --- [http-nio-8080-exec-4] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpMediaTypeNotSupportedException: Content-Type is not supported]
+2024-02-25T16:35:47.283+03:30  WARN 1852 --- [http-nio-8080-exec-5] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'DELETE' is not supported]
+2024-02-25T16:49:10.147+03:30 DEBUG 1852 --- [http-nio-8080-exec-9] c.e.p.logging.ApplicationLoggerAspect    : 
  
  
 
-2024-02-24T14:41:14.394+03:30 DEBUG 10928 --- [http-nio-8080-exec-1] c.e.p.logging.ApplicationLoggerAspect    : ********** Before method execution *********
- com.example.projectmanagement.controllers.HomeController.displayHome () with arguments[s] = [{versionNumber=dev, projectList=[com.example.projectmanagement.entities.Project@19dd83fb, com.example.projectmanagement.entities.Project@18c629d4, com.example.projectmanagement.entities.Project@3e4ff792, com.example.projectmanagement.entities.Project@45c4461d], projectStatusCount=[{"value":1,"label":"NOTSTARTED"},{"value":1,"label":"COMPLETED"},{"value":2,"label":"INPROGRESS"}], employeesListProjectCount=[org.springframework.data.jpa.repository.query.AbstractJpaQuery$TupleConverter$TupleBackedMap@4f249b14, org.springframework.data.jpa.repository.query.AbstractJpaQuery$TupleConverter$TupleBackedMap@55fce7fd, org.springframework.data.jpa.repository.query.AbstractJpaQuery$TupleConverter$TupleBackedMap@7ca98575, org.springframework.data.jpa.repository.query.AbstractJpaQuery$TupleConverter$TupleBackedMap@2d607fd0, org.springframework.data.jpa.repository.query.AbstractJpaQuery$TupleConverter$TupleBackedMap@46f7ad53, org.springframework.data.jpa.repository.query.AbstractJpaQuery$TupleConverter$TupleBackedMap@7406797f, org.springframework.data.jpa.repository.query.AbstractJpaQuery$TupleConverter$TupleBackedMap@4434c8a7, org.springframework.data.jpa.repository.query.AbstractJpaQuery$TupleConverter$TupleBackedMap@6a04a10e, org.springframework.data.jpa.repository.query.AbstractJpaQuery$TupleConverter$TupleBackedMap@11e21428, org.springframework.data.jpa.repository.query.AbstractJpaQuery$TupleConverter$TupleBackedMap@56e84aea]}]
-2024-02-24T14:41:14.398+03:30 DEBUG 10928 --- [http-nio-8080-exec-1] c.e.p.logging.ApplicationLoggerAspect    : *********************************************** 
+2024-02-25T16:49:10.151+03:30 DEBUG 1852 --- [http-nio-8080-exec-9] c.e.p.logging.ApplicationLoggerAspect    : ********** Before method execution *********
+ com.example.projectmanagement.controllers.HomeController.displayHome () with arguments[s] = [{versionNumber=dev, projectList=[com.example.projectmanagement.entities.Project@416e229d, com.example.projectmanagement.entities.Project@1c86cf18, com.example.projectmanagement.entities.Project@6db6d59a, com.example.projectmanagement.entities.Project@72837a4e], projectStatusCount=[{"value":1,"label":"NOTSTARTED"},{"value":1,"label":"COMPLETED"},{"value":2,"label":"INPROGRESS"}], employeesListProjectCount=[org.springframework.data.jpa.repository.query.AbstractJpaQuery$TupleConverter$TupleBackedMap@565e0df6, org.springframework.data.jpa.repository.query.AbstractJpaQuery$TupleConverter$TupleBackedMap@5c9951aa, org.springframework.data.jpa.repository.query.AbstractJpaQuery$TupleConverter$TupleBackedMap@30130818, org.springframework.data.jpa.repository.query.AbstractJpaQuery$TupleConverter$TupleBackedMap@36be7b95, org.springframework.data.jpa.repository.query.AbstractJpaQuery$TupleConverter$TupleBackedMap@1029e109, org.springframework.data.jpa.repository.query.AbstractJpaQuery$TupleConverter$TupleBackedMap@62bf6a7, org.springframework.data.jpa.repository.query.AbstractJpaQuery$TupleConverter$TupleBackedMap@2ed06db2, org.springframework.data.jpa.repository.query.AbstractJpaQuery$TupleConverter$TupleBackedMap@6bf7c92e, org.springframework.data.jpa.repository.query.AbstractJpaQuery$TupleConverter$TupleBackedMap@34895cf0, org.springframework.data.jpa.repository.query.AbstractJpaQuery$TupleConverter$TupleBackedMap@6d4e1a08, org.springframework.data.jpa.repository.query.AbstractJpaQuery$TupleConverter$TupleBackedMap@40de47ee]}]
+2024-02-25T16:49:10.156+03:30 DEBUG 1852 --- [http-nio-8080-exec-9] c.e.p.logging.ApplicationLoggerAspect    : *********************************************** 
  
  
 
-2024-02-24T14:41:34.853+03:30 DEBUG 10928 --- [http-nio-8080-exec-3] c.e.p.logging.ApplicationLoggerAspect    : 
- 
- 
-
-2024-02-24T14:41:34.853+03:30 DEBUG 10928 --- [http-nio-8080-exec-3] c.e.p.logging.ApplicationLoggerAspect    : ********** Before method execution *********
- com.example.projectmanagement.controllers.ProjectController.displayProjects () with arguments[s] = [{projects=[com.example.projectmanagement.entities.Project@57951fec, com.example.projectmanagement.entities.Project@36fab8c2, com.example.projectmanagement.entities.Project@77678e12, com.example.projectmanagement.entities.Project@1b071e20]}]
-2024-02-24T14:41:34.853+03:30 DEBUG 10928 --- [http-nio-8080-exec-3] c.e.p.logging.ApplicationLoggerAspect    : *********************************************** 
- 
- 
-
-2024-02-24T14:41:36.487+03:30 DEBUG 10928 --- [http-nio-8080-exec-4] c.e.p.logging.ApplicationLoggerAspect    : 
- 
- 
-
-2024-02-24T14:41:36.487+03:30 DEBUG 10928 --- [http-nio-8080-exec-4] c.e.p.logging.ApplicationLoggerAspect    : ********** Before method execution *********
- com.example.projectmanagement.controllers.EmployeeController.displayEmployees () with arguments[s] = [{employees=[com.example.projectmanagement.entities.Employee@5525e89f, com.example.projectmanagement.entities.Employee@3dfc55ee, com.example.projectmanagement.entities.Employee@516bd10b, com.example.projectmanagement.entities.Employee@775f7274, com.example.projectmanagement.entities.Employee@56c22727, com.example.projectmanagement.entities.Employee@6a6cd880, com.example.projectmanagement.entities.Employee@6e16598, com.example.projectmanagement.entities.Employee@abebcfe, com.example.projectmanagement.entities.Employee@2a4281be, com.example.projectmanagement.entities.Employee@54d1318]}]
-2024-02-24T14:41:36.487+03:30 DEBUG 10928 --- [http-nio-8080-exec-4] c.e.p.logging.ApplicationLoggerAspect    : *********************************************** 
- 
- 
-
-2024-02-24T14:49:26.939+03:30  INFO 10928 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2024-02-24T18:02:28.198+03:30  INFO 424 --- [main] c.e.p.ProjectManagementApplication       : Starting ProjectManagementApplication using Java 17.0.2 with PID 424 (D:\Mehrdad\Java\IdeaProjects\spring course one\target\classes started by MehRdad in D:\Mehrdad\Java\IdeaProjects\spring course one)
-2024-02-24T18:02:28.203+03:30 DEBUG 424 --- [main] c.e.p.ProjectManagementApplication       : Running with Spring Boot v3.2.0, Spring v6.1.1
-2024-02-24T18:02:28.204+03:30  INFO 424 --- [main] c.e.p.ProjectManagementApplication       : The following 1 profile is active: "dev"
-2024-02-24T18:02:29.948+03:30  INFO 424 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-02-24T18:02:30.057+03:30  INFO 424 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 91 ms. Found 2 JPA repository interfaces.
-2024-02-24T18:02:31.150+03:30  INFO 424 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
-2024-02-24T18:02:31.330+03:30  INFO 424 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2976 ms
-2024-02-24T18:02:32.306+03:30  INFO 424 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2024-02-24T18:02:34.859+03:30  INFO 424 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-02-24T18:02:35.406+03:30  INFO 424 --- [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
-2024-02-24T18:02:35.673+03:30  WARN 424 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2024-02-24T18:02:36.544+03:30  INFO 424 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
-2024-02-24T18:02:36.572+03:30  INFO 424 --- [main] c.e.p.ProjectManagementApplication       : Started ProjectManagementApplication in 9.441 seconds (process running for 12.089)
-2024-02-24T19:18:31.715+03:30  INFO 424 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-02-25T16:52:54.903+03:30  WARN 1852 --- [http-nio-8080-exec-2] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'DELETE' is not supported]
+2024-02-25T16:53:40.439+03:30  INFO 1852 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-02-25T16:53:49.688+03:30  INFO 8504 --- [main] c.e.p.ProjectManagementApplication       : Starting ProjectManagementApplication using Java 17.0.2 with PID 8504 (D:\Mehrdad\Java\IdeaProjects\spring course one\target\classes started by MehRdad in D:\Mehrdad\Java\IdeaProjects\spring course one)
+2024-02-25T16:53:49.692+03:30 DEBUG 8504 --- [main] c.e.p.ProjectManagementApplication       : Running with Spring Boot v3.2.0, Spring v6.1.1
+2024-02-25T16:53:49.695+03:30  INFO 8504 --- [main] c.e.p.ProjectManagementApplication       : The following 1 profile is active: "dev"
+2024-02-25T16:53:51.425+03:30  INFO 8504 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-02-25T16:53:51.576+03:30  INFO 8504 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 134 ms. Found 2 JPA repository interfaces.
+2024-02-25T16:53:53.129+03:30  INFO 8504 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-02-25T16:53:53.313+03:30  INFO 8504 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3469 ms
+2024-02-25T16:53:54.380+03:30  INFO 8504 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-02-25T16:53:57.111+03:30  INFO 8504 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-02-25T16:53:59.134+03:30  INFO 8504 --- [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-02-25T16:53:59.619+03:30  WARN 8504 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-02-25T16:54:02.374+03:30  INFO 8504 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+2024-02-25T16:54:02.391+03:30  INFO 8504 --- [main] c.e.p.ProjectManagementApplication       : Started ProjectManagementApplication in 13.635 seconds (process running for 15.118)
+2024-02-25T16:54:16.552+03:30  INFO 8504 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-02-25T16:54:16.555+03:30  INFO 8504 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2024-02-25T16:54:16.584+03:30  WARN 8504 --- [http-nio-8080-exec-1] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'DELETE' is not supported]
+2024-02-25T16:55:06.702+03:30  WARN 8504 --- [http-nio-8080-exec-5] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'DELETE' is not supported]
+2024-02-25T17:00:01.168+03:30  INFO 8504 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-02-25T17:00:13.593+03:30  INFO 13144 --- [main] c.e.p.ProjectManagementApplication       : Starting ProjectManagementApplication using Java 17.0.2 with PID 13144 (D:\Mehrdad\Java\IdeaProjects\spring course one\target\classes started by MehRdad in D:\Mehrdad\Java\IdeaProjects\spring course one)
+2024-02-25T17:00:13.597+03:30 DEBUG 13144 --- [main] c.e.p.ProjectManagementApplication       : Running with Spring Boot v3.2.0, Spring v6.1.1
+2024-02-25T17:00:13.599+03:30  INFO 13144 --- [main] c.e.p.ProjectManagementApplication       : The following 1 profile is active: "dev"
+2024-02-25T17:00:16.339+03:30  INFO 13144 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-02-25T17:00:16.485+03:30  INFO 13144 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 124 ms. Found 2 JPA repository interfaces.
+2024-02-25T17:00:17.763+03:30  INFO 13144 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-02-25T17:00:17.892+03:30  INFO 13144 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 4137 ms
+2024-02-25T17:00:18.700+03:30  INFO 13144 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-02-25T17:00:20.999+03:30  INFO 13144 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-02-25T17:00:21.416+03:30  INFO 13144 --- [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-02-25T17:00:21.622+03:30  WARN 13144 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-02-25T17:00:22.309+03:30  INFO 13144 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+2024-02-25T17:00:22.325+03:30  INFO 13144 --- [main] c.e.p.ProjectManagementApplication       : Started ProjectManagementApplication in 10.015 seconds (process running for 11.798)
+2024-02-25T17:00:41.845+03:30  INFO 13144 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-02-25T17:00:41.847+03:30  INFO 13144 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2024-02-25T17:01:01.192+03:30  WARN 13144 --- [http-nio-8080-exec-3] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'DELETE' is not supported]
+2024-02-25T17:02:09.921+03:30  WARN 13144 --- [http-nio-8080-exec-7] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'DELETE' is not supported]
+2024-02-25T17:04:10.894+03:30  INFO 13144 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-02-25T17:04:22.873+03:30  INFO 11916 --- [main] c.e.p.ProjectManagementApplication       : Starting ProjectManagementApplication using Java 17.0.2 with PID 11916 (D:\Mehrdad\Java\IdeaProjects\spring course one\target\classes started by MehRdad in D:\Mehrdad\Java\IdeaProjects\spring course one)
+2024-02-25T17:04:22.877+03:30 DEBUG 11916 --- [main] c.e.p.ProjectManagementApplication       : Running with Spring Boot v3.2.0, Spring v6.1.1
+2024-02-25T17:04:22.879+03:30  INFO 11916 --- [main] c.e.p.ProjectManagementApplication       : The following 1 profile is active: "dev"
+2024-02-25T17:04:24.396+03:30  INFO 11916 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-02-25T17:04:24.494+03:30  INFO 11916 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 84 ms. Found 2 JPA repository interfaces.
+2024-02-25T17:04:25.472+03:30  INFO 11916 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-02-25T17:04:25.604+03:30  INFO 11916 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2614 ms
+2024-02-25T17:04:26.390+03:30  INFO 11916 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-02-25T17:04:28.679+03:30  INFO 11916 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-02-25T17:04:29.092+03:30  INFO 11916 --- [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-02-25T17:04:29.301+03:30  WARN 11916 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-02-25T17:04:30.017+03:30  INFO 11916 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+2024-02-25T17:04:30.033+03:30  INFO 11916 --- [main] c.e.p.ProjectManagementApplication       : Started ProjectManagementApplication in 8.088 seconds (process running for 9.634)
+2024-02-25T17:04:41.318+03:30  INFO 11916 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-02-25T17:04:41.321+03:30  INFO 11916 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-02-25T17:04:41.348+03:30  WARN 11916 --- [http-nio-8080-exec-1] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'DELETE' is not supported]
+2024-02-25T17:05:45.024+03:30  INFO 11916 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'

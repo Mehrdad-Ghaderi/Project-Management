@@ -31,4 +31,8 @@ public class EmployeeService {
         Long foundId = Long.parseLong(id);
         return employeeRepository.findById(foundId).get();
     }
+
+    public void deleteById(String id) {
+        employeeRepository.deleteById(Long.valueOf(id));
+    }
 }
