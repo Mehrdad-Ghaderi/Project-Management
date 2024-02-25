@@ -1,1 +1,203 @@
 2024-02-26T00:25:43.807+03:30  INFO 6940 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-02-26T00:25:55.321+03:30  INFO 14996 --- [main] c.e.p.ProjectManagementApplication       : Starting ProjectManagementApplication using Java 17.0.2 with PID 14996 (D:\Mehrdad\Java\IdeaProjects\spring course one\target\classes started by MehRdad in D:\Mehrdad\Java\IdeaProjects\spring course one)
+2024-02-26T00:25:55.332+03:30 DEBUG 14996 --- [main] c.e.p.ProjectManagementApplication       : Running with Spring Boot v3.2.0, Spring v6.1.1
+2024-02-26T00:25:55.338+03:30  INFO 14996 --- [main] c.e.p.ProjectManagementApplication       : The following 1 profile is active: "dev"
+2024-02-26T00:25:57.427+03:30  INFO 14996 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-02-26T00:25:57.686+03:30  INFO 14996 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 237 ms. Found 2 JPA repository interfaces.
+2024-02-26T00:25:59.043+03:30  INFO 14996 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-02-26T00:25:59.181+03:30  INFO 14996 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3675 ms
+2024-02-26T00:26:00.143+03:30  INFO 14996 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-02-26T00:26:02.930+03:30  INFO 14996 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-02-26T00:26:03.327+03:30  INFO 14996 --- [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-02-26T00:26:03.623+03:30  WARN 14996 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-02-26T00:26:04.376+03:30  INFO 14996 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+2024-02-26T00:26:04.396+03:30  INFO 14996 --- [main] c.e.p.ProjectManagementApplication       : Started ProjectManagementApplication in 10.133 seconds (process running for 11.678)
+2024-02-26T00:26:11.993+03:30  INFO 14996 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-02-26T00:26:11.996+03:30  INFO 14996 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-02-26T00:26:24.522+03:30 DEBUG 14996 --- [http-nio-8080-exec-3] c.e.p.logging.ApplicationLoggerAspect    : 
+ 
+ 
+
+2024-02-26T00:26:24.525+03:30 DEBUG 14996 --- [http-nio-8080-exec-3] c.e.p.logging.ApplicationLoggerAspect    : ********** Before method execution *********
+ com.example.projectmanagement.controllers.ProjectController.displayProjects () with arguments[s] = [{projects=[com.example.projectmanagement.entities.Project@536f5e95, com.example.projectmanagement.entities.Project@7402399e, com.example.projectmanagement.entities.Project@4d874b06, com.example.projectmanagement.entities.Project@15ad309d, com.example.projectmanagement.entities.Project@2f2a5d14]}]
+2024-02-26T00:26:24.527+03:30 DEBUG 14996 --- [http-nio-8080-exec-3] c.e.p.logging.ApplicationLoggerAspect    : *********************************************** 
+ 
+ 
+
+2024-02-26T00:26:26.113+03:30 DEBUG 14996 --- [http-nio-8080-exec-4] c.e.p.logging.ApplicationLoggerAspect    : 
+ 
+ 
+
+2024-02-26T00:26:26.114+03:30 DEBUG 14996 --- [http-nio-8080-exec-4] c.e.p.logging.ApplicationLoggerAspect    : ********** Before method execution *********
+ com.example.projectmanagement.controllers.EmployeeController.displayEmployees () with arguments[s] = [{employees=[com.example.projectmanagement.entities.Employee@15e56de6, com.example.projectmanagement.entities.Employee@449f6b21, com.example.projectmanagement.entities.Employee@11ab14b2, com.example.projectmanagement.entities.Employee@3f23056f, com.example.projectmanagement.entities.Employee@553c0f9f, com.example.projectmanagement.entities.Employee@20310f7d, com.example.projectmanagement.entities.Employee@7c981cfd, com.example.projectmanagement.entities.Employee@4bbd1eb0, com.example.projectmanagement.entities.Employee@53a28be8, com.example.projectmanagement.entities.Employee@6e72dc67]}]
+2024-02-26T00:26:26.114+03:30 DEBUG 14996 --- [http-nio-8080-exec-4] c.e.p.logging.ApplicationLoggerAspect    : *********************************************** 
+ 
+ 
+
+2024-02-26T00:26:28.197+03:30 DEBUG 14996 --- [http-nio-8080-exec-5] c.e.p.logging.ApplicationLoggerAspect    : 
+ 
+ 
+
+2024-02-26T00:26:28.198+03:30 DEBUG 14996 --- [http-nio-8080-exec-5] c.e.p.logging.ApplicationLoggerAspect    : ********** Before method execution *********
+ com.example.projectmanagement.controllers.EmployeeController.displayEmployeeForm () with arguments[s] = [{employee=com.example.projectmanagement.entities.Employee@4bc32499}]
+2024-02-26T00:26:28.198+03:30 DEBUG 14996 --- [http-nio-8080-exec-5] c.e.p.logging.ApplicationLoggerAspect    : *********************************************** 
+ 
+ 
+
+2024-02-26T00:26:29.584+03:30 DEBUG 14996 --- [http-nio-8080-exec-6] c.e.p.logging.ApplicationLoggerAspect    : 
+ 
+ 
+
+2024-02-26T00:26:29.585+03:30 DEBUG 14996 --- [http-nio-8080-exec-6] c.e.p.logging.ApplicationLoggerAspect    : ********** Before method execution *********
+ com.example.projectmanagement.controllers.ProjectController.displayProjects () with arguments[s] = [{projects=[com.example.projectmanagement.entities.Project@271df31d, com.example.projectmanagement.entities.Project@68f2764c, com.example.projectmanagement.entities.Project@206c686, com.example.projectmanagement.entities.Project@e39240, com.example.projectmanagement.entities.Project@24b0887a]}]
+2024-02-26T00:26:29.585+03:30 DEBUG 14996 --- [http-nio-8080-exec-6] c.e.p.logging.ApplicationLoggerAspect    : *********************************************** 
+ 
+ 
+
+2024-02-26T00:28:39.235+03:30  INFO 14996 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-02-26T00:28:55.367+03:30  INFO 13856 --- [main] c.e.p.ProjectManagementApplication       : Starting ProjectManagementApplication using Java 17.0.2 with PID 13856 (D:\Mehrdad\Java\IdeaProjects\spring course one\target\classes started by MehRdad in D:\Mehrdad\Java\IdeaProjects\spring course one)
+2024-02-26T00:28:55.371+03:30 DEBUG 13856 --- [main] c.e.p.ProjectManagementApplication       : Running with Spring Boot v3.2.0, Spring v6.1.1
+2024-02-26T00:28:55.373+03:30  INFO 13856 --- [main] c.e.p.ProjectManagementApplication       : The following 1 profile is active: "dev"
+2024-02-26T00:28:56.963+03:30  INFO 13856 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-02-26T00:28:57.083+03:30  INFO 13856 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 102 ms. Found 2 JPA repository interfaces.
+2024-02-26T00:28:58.212+03:30  INFO 13856 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-02-26T00:28:58.350+03:30  INFO 13856 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2857 ms
+2024-02-26T00:28:59.261+03:30  INFO 13856 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-02-26T00:29:02.990+03:30  INFO 13856 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-02-26T00:29:03.721+03:30  INFO 13856 --- [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-02-26T00:29:04.270+03:30  WARN 13856 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-02-26T00:29:05.214+03:30  INFO 13856 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+2024-02-26T00:29:05.235+03:30  INFO 13856 --- [main] c.e.p.ProjectManagementApplication       : Started ProjectManagementApplication in 10.896 seconds (process running for 12.705)
+2024-02-26T00:29:05.366+03:30  INFO 13856 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-02-26T00:29:05.368+03:30  INFO 13856 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2024-02-26T00:29:05.940+03:30 DEBUG 13856 --- [http-nio-8080-exec-1] c.e.p.logging.ApplicationLoggerAspect    : 
+ 
+ 
+
+2024-02-26T00:29:05.948+03:30 DEBUG 13856 --- [http-nio-8080-exec-1] c.e.p.logging.ApplicationLoggerAspect    : ********** Before method execution *********
+ com.example.projectmanagement.controllers.HomeController.displayHome () with arguments[s] = [{versionNumber=dev, projectList=[com.example.projectmanagement.entities.Project@4a36f930, com.example.projectmanagement.entities.Project@4ec6a527, com.example.projectmanagement.entities.Project@7c174840, com.example.projectmanagement.entities.Project@72340e7d, com.example.projectmanagement.entities.Project@5f4f6758], projectStatusCount=[{"value":1,"label":"NOTSTARTED"},{"value":1,"label":"COMPLETED"},{"value":3,"label":"INPROGRESS"}], employeesListProjectCount=[org.springframework.data.jpa.repository.query.AbstractJpaQuery$TupleConverter$TupleBackedMap@b9bdc42, org.springframework.data.jpa.repository.query.AbstractJpaQuery$TupleConverter$TupleBackedMap@288570de, org.springframework.data.jpa.repository.query.AbstractJpaQuery$TupleConverter$TupleBackedMap@5bd97c1d, org.springframework.data.jpa.repository.query.AbstractJpaQuery$TupleConverter$TupleBackedMap@7212420, org.springframework.data.jpa.repository.query.AbstractJpaQuery$TupleConverter$TupleBackedMap@528d914a, org.springframework.data.jpa.repository.query.AbstractJpaQuery$TupleConverter$TupleBackedMap@518d0845, org.springframework.data.jpa.repository.query.AbstractJpaQuery$TupleConverter$TupleBackedMap@41a4bffd, org.springframework.data.jpa.repository.query.AbstractJpaQuery$TupleConverter$TupleBackedMap@4faa83cd, org.springframework.data.jpa.repository.query.AbstractJpaQuery$TupleConverter$TupleBackedMap@71135cb3, org.springframework.data.jpa.repository.query.AbstractJpaQuery$TupleConverter$TupleBackedMap@4865bdf4]}]
+2024-02-26T00:29:05.952+03:30 DEBUG 13856 --- [http-nio-8080-exec-1] c.e.p.logging.ApplicationLoggerAspect    : *********************************************** 
+ 
+ 
+
+2024-02-26T00:29:09.111+03:30 DEBUG 13856 --- [http-nio-8080-exec-3] c.e.p.logging.ApplicationLoggerAspect    : 
+ 
+ 
+
+2024-02-26T00:29:09.112+03:30 DEBUG 13856 --- [http-nio-8080-exec-3] c.e.p.logging.ApplicationLoggerAspect    : ********** Before method execution *********
+ com.example.projectmanagement.controllers.ProjectController.displayProjects () with arguments[s] = [{projects=[com.example.projectmanagement.entities.Project@3b512d42, com.example.projectmanagement.entities.Project@4aae40c1, com.example.projectmanagement.entities.Project@6ccbe43c, com.example.projectmanagement.entities.Project@354d9e93, com.example.projectmanagement.entities.Project@4fd346a9]}]
+2024-02-26T00:29:09.113+03:30 DEBUG 13856 --- [http-nio-8080-exec-3] c.e.p.logging.ApplicationLoggerAspect    : *********************************************** 
+ 
+ 
+
+2024-02-26T00:29:10.404+03:30 DEBUG 13856 --- [http-nio-8080-exec-4] c.e.p.logging.ApplicationLoggerAspect    : 
+ 
+ 
+
+2024-02-26T00:29:10.404+03:30 DEBUG 13856 --- [http-nio-8080-exec-4] c.e.p.logging.ApplicationLoggerAspect    : ********** Before method execution *********
+ com.example.projectmanagement.controllers.ProjectController.displayProjectForm () with arguments[s] = [{project=com.example.projectmanagement.entities.Project@68bced18, employees=[com.example.projectmanagement.entities.Employee@3a49a126, com.example.projectmanagement.entities.Employee@12f3a056, com.example.projectmanagement.entities.Employee@6c21b5e5, com.example.projectmanagement.entities.Employee@99165e0, com.example.projectmanagement.entities.Employee@40792b4f, com.example.projectmanagement.entities.Employee@38f3efab, com.example.projectmanagement.entities.Employee@21bfef3a, com.example.projectmanagement.entities.Employee@450101b8, com.example.projectmanagement.entities.Employee@1fd9962b, com.example.projectmanagement.entities.Employee@71b4ec7a]}]
+2024-02-26T00:29:10.405+03:30 DEBUG 13856 --- [http-nio-8080-exec-4] c.e.p.logging.ApplicationLoggerAspect    : *********************************************** 
+ 
+ 
+
+2024-02-26T00:29:13.064+03:30 DEBUG 13856 --- [http-nio-8080-exec-5] c.e.p.logging.ApplicationLoggerAspect    : 
+ 
+ 
+
+2024-02-26T00:29:13.065+03:30 DEBUG 13856 --- [http-nio-8080-exec-5] c.e.p.logging.ApplicationLoggerAspect    : ********** Before method execution *********
+ com.example.projectmanagement.controllers.EmployeeController.displayEmployees () with arguments[s] = [{employees=[com.example.projectmanagement.entities.Employee@15e56de6, com.example.projectmanagement.entities.Employee@449f6b21, com.example.projectmanagement.entities.Employee@11ab14b2, com.example.projectmanagement.entities.Employee@3f23056f, com.example.projectmanagement.entities.Employee@553c0f9f, com.example.projectmanagement.entities.Employee@20310f7d, com.example.projectmanagement.entities.Employee@7c981cfd, com.example.projectmanagement.entities.Employee@4bbd1eb0, com.example.projectmanagement.entities.Employee@53a28be8, com.example.projectmanagement.entities.Employee@6e72dc67]}]
+2024-02-26T00:29:13.065+03:30 DEBUG 13856 --- [http-nio-8080-exec-5] c.e.p.logging.ApplicationLoggerAspect    : *********************************************** 
+ 
+ 
+
+2024-02-26T00:29:14.892+03:30 DEBUG 13856 --- [http-nio-8080-exec-6] c.e.p.logging.ApplicationLoggerAspect    : 
+ 
+ 
+
+2024-02-26T00:29:14.892+03:30 DEBUG 13856 --- [http-nio-8080-exec-6] c.e.p.logging.ApplicationLoggerAspect    : ********** Before method execution *********
+ com.example.projectmanagement.controllers.EmployeeController.displayEmployeeForm () with arguments[s] = [{employee=com.example.projectmanagement.entities.Employee@413b4fe9}]
+2024-02-26T00:29:14.892+03:30 DEBUG 13856 --- [http-nio-8080-exec-6] c.e.p.logging.ApplicationLoggerAspect    : *********************************************** 
+ 
+ 
+
+2024-02-26T00:29:20.948+03:30 DEBUG 13856 --- [http-nio-8080-exec-7] c.e.p.logging.ApplicationLoggerAspect    : 
+ 
+ 
+
+2024-02-26T00:29:20.949+03:30 DEBUG 13856 --- [http-nio-8080-exec-7] c.e.p.logging.ApplicationLoggerAspect    : ********** Before method execution *********
+ com.example.projectmanagement.controllers.EmployeeController.createEmployee () with arguments[s] = [com.example.projectmanagement.entities.Employee@5c974ace, {employee=com.example.projectmanagement.entities.Employee@5c974ace, org.springframework.validation.BindingResult.employee=org.springframework.validation.BeanPropertyBindingResult: 0 errors}]
+2024-02-26T00:29:20.949+03:30 DEBUG 13856 --- [http-nio-8080-exec-7] c.e.p.logging.ApplicationLoggerAspect    : *********************************************** 
+ 
+ 
+
+2024-02-26T00:29:20.972+03:30 DEBUG 13856 --- [http-nio-8080-exec-8] c.e.p.logging.ApplicationLoggerAspect    : 
+ 
+ 
+
+2024-02-26T00:29:20.973+03:30 DEBUG 13856 --- [http-nio-8080-exec-8] c.e.p.logging.ApplicationLoggerAspect    : ********** Before method execution *********
+ com.example.projectmanagement.controllers.EmployeeController.displayEmployees () with arguments[s] = [{employees=[com.example.projectmanagement.entities.Employee@22ac375d, com.example.projectmanagement.entities.Employee@384426ea, com.example.projectmanagement.entities.Employee@170ae997, com.example.projectmanagement.entities.Employee@40e829f7, com.example.projectmanagement.entities.Employee@2d48fa41, com.example.projectmanagement.entities.Employee@649e020d, com.example.projectmanagement.entities.Employee@14bb36da, com.example.projectmanagement.entities.Employee@247be0b2, com.example.projectmanagement.entities.Employee@4d5998e3, com.example.projectmanagement.entities.Employee@e132cbb, com.example.projectmanagement.entities.Employee@44403f7e]}]
+2024-02-26T00:29:20.973+03:30 DEBUG 13856 --- [http-nio-8080-exec-8] c.e.p.logging.ApplicationLoggerAspect    : *********************************************** 
+ 
+ 
+
+2024-02-26T00:29:26.303+03:30 DEBUG 13856 --- [http-nio-8080-exec-9] c.e.p.logging.ApplicationLoggerAspect    : 
+ 
+ 
+
+2024-02-26T00:29:26.304+03:30 DEBUG 13856 --- [http-nio-8080-exec-9] c.e.p.logging.ApplicationLoggerAspect    : ********** Before method execution *********
+ com.example.projectmanagement.controllers.ProjectController.displayProjects () with arguments[s] = [{projects=[com.example.projectmanagement.entities.Project@4286d3cb, com.example.projectmanagement.entities.Project@1b96cfc2, com.example.projectmanagement.entities.Project@46c86dec, com.example.projectmanagement.entities.Project@3a633135, com.example.projectmanagement.entities.Project@2ed9d1da]}]
+2024-02-26T00:29:26.304+03:30 DEBUG 13856 --- [http-nio-8080-exec-9] c.e.p.logging.ApplicationLoggerAspect    : *********************************************** 
+ 
+ 
+
+2024-02-26T00:29:28.006+03:30 DEBUG 13856 --- [http-nio-8080-exec-10] c.e.p.logging.ApplicationLoggerAspect    : 
+ 
+ 
+
+2024-02-26T00:29:28.007+03:30 DEBUG 13856 --- [http-nio-8080-exec-10] c.e.p.logging.ApplicationLoggerAspect    : ********** Before method execution *********
+ com.example.projectmanagement.controllers.ProjectController.displayProjectForm () with arguments[s] = [{project=com.example.projectmanagement.entities.Project@1e70d547, employees=[com.example.projectmanagement.entities.Employee@1654be9, com.example.projectmanagement.entities.Employee@6a1bfbe4, com.example.projectmanagement.entities.Employee@47f771c1, com.example.projectmanagement.entities.Employee@61831059, com.example.projectmanagement.entities.Employee@4313ad69, com.example.projectmanagement.entities.Employee@7e72f4c6, com.example.projectmanagement.entities.Employee@2a190d12, com.example.projectmanagement.entities.Employee@15156ded, com.example.projectmanagement.entities.Employee@7fc109a5, com.example.projectmanagement.entities.Employee@7e816865, com.example.projectmanagement.entities.Employee@316545a]}]
+2024-02-26T00:29:28.007+03:30 DEBUG 13856 --- [http-nio-8080-exec-10] c.e.p.logging.ApplicationLoggerAspect    : *********************************************** 
+ 
+ 
+
+2024-02-26T00:29:42.286+03:30 DEBUG 13856 --- [http-nio-8080-exec-1] c.e.p.logging.ApplicationLoggerAspect    : 
+ 
+ 
+
+2024-02-26T00:29:42.287+03:30 DEBUG 13856 --- [http-nio-8080-exec-1] c.e.p.logging.ApplicationLoggerAspect    : ********** Before method execution *********
+ com.example.projectmanagement.controllers.ProjectController.createProject () with arguments[s] = [com.example.projectmanagement.entities.Project@39096c3a, {project=com.example.projectmanagement.entities.Project@39096c3a, org.springframework.validation.BindingResult.project=org.springframework.validation.BeanPropertyBindingResult: 0 errors}]
+2024-02-26T00:29:42.287+03:30 DEBUG 13856 --- [http-nio-8080-exec-1] c.e.p.logging.ApplicationLoggerAspect    : *********************************************** 
+ 
+ 
+
+2024-02-26T00:29:42.306+03:30 DEBUG 13856 --- [http-nio-8080-exec-2] c.e.p.logging.ApplicationLoggerAspect    : 
+ 
+ 
+
+2024-02-26T00:29:42.306+03:30 DEBUG 13856 --- [http-nio-8080-exec-2] c.e.p.logging.ApplicationLoggerAspect    : ********** Before method execution *********
+ com.example.projectmanagement.controllers.ProjectController.displayProjects () with arguments[s] = [{projects=[com.example.projectmanagement.entities.Project@2bd1054, com.example.projectmanagement.entities.Project@3392454, com.example.projectmanagement.entities.Project@5cb53249, com.example.projectmanagement.entities.Project@795ebfdc, com.example.projectmanagement.entities.Project@3f046cdc, com.example.projectmanagement.entities.Project@795ee832]}]
+2024-02-26T00:29:42.307+03:30 DEBUG 13856 --- [http-nio-8080-exec-2] c.e.p.logging.ApplicationLoggerAspect    : *********************************************** 
+ 
+ 
+
+2024-02-26T00:29:44.806+03:30 DEBUG 13856 --- [http-nio-8080-exec-3] c.e.p.logging.ApplicationLoggerAspect    : 
+ 
+ 
+
+2024-02-26T00:29:44.806+03:30 DEBUG 13856 --- [http-nio-8080-exec-3] c.e.p.logging.ApplicationLoggerAspect    : ********** Before method execution *********
+ com.example.projectmanagement.controllers.ProjectController.displayProjects () with arguments[s] = [{projects=[com.example.projectmanagement.entities.Project@5ae9c915, com.example.projectmanagement.entities.Project@f22fb5, com.example.projectmanagement.entities.Project@1a2c98f, com.example.projectmanagement.entities.Project@29ddd501, com.example.projectmanagement.entities.Project@13c41199, com.example.projectmanagement.entities.Project@7242adba]}]
+2024-02-26T00:29:44.806+03:30 DEBUG 13856 --- [http-nio-8080-exec-3] c.e.p.logging.ApplicationLoggerAspect    : *********************************************** 
+ 
+ 
+
+2024-02-26T00:29:46.215+03:30 DEBUG 13856 --- [http-nio-8080-exec-4] c.e.p.logging.ApplicationLoggerAspect    : 
+ 
+ 
+
+2024-02-26T00:29:46.216+03:30 DEBUG 13856 --- [http-nio-8080-exec-4] c.e.p.logging.ApplicationLoggerAspect    : ********** Before method execution *********
+ com.example.projectmanagement.controllers.HomeController.displayHome () with arguments[s] = [{versionNumber=dev, projectList=[com.example.projectmanagement.entities.Project@e3b2a79, com.example.projectmanagement.entities.Project@3de16d2d, com.example.projectmanagement.entities.Project@76e1ca1, com.example.projectmanagement.entities.Project@5be954d5, com.example.projectmanagement.entities.Project@70797cc1, com.example.projectmanagement.entities.Project@3281cc27], projectStatusCount=[{"value":1,"label":"NOTSTARTED"},{"value":1,"label":"COMPLETED"},{"value":4,"label":"INPROGRESS"}], employeesListProjectCount=[org.springframework.data.jpa.repository.query.AbstractJpaQuery$TupleConverter$TupleBackedMap@220dfce8, org.springframework.data.jpa.repository.query.AbstractJpaQuery$TupleConverter$TupleBackedMap@6ad04711, org.springframework.data.jpa.repository.query.AbstractJpaQuery$TupleConverter$TupleBackedMap@4cbc1793, org.springframework.data.jpa.repository.query.AbstractJpaQuery$TupleConverter$TupleBackedMap@4595ee63, org.springframework.data.jpa.repository.query.AbstractJpaQuery$TupleConverter$TupleBackedMap@8b2b085, org.springframework.data.jpa.repository.query.AbstractJpaQuery$TupleConverter$TupleBackedMap@60b2864d, org.springframework.data.jpa.repository.query.AbstractJpaQuery$TupleConverter$TupleBackedMap@4c1e0547, org.springframework.data.jpa.repository.query.AbstractJpaQuery$TupleConverter$TupleBackedMap@26120c51, org.springframework.data.jpa.repository.query.AbstractJpaQuery$TupleConverter$TupleBackedMap@3b39a68e, org.springframework.data.jpa.repository.query.AbstractJpaQuery$TupleConverter$TupleBackedMap@4f4dcf4a, org.springframework.data.jpa.repository.query.AbstractJpaQuery$TupleConverter$TupleBackedMap@7345dfd9]}]
+2024-02-26T00:29:46.216+03:30 DEBUG 13856 --- [http-nio-8080-exec-4] c.e.p.logging.ApplicationLoggerAspect    : *********************************************** 
+ 
+ 
+
+2024-02-26T00:33:34.607+03:30  INFO 13856 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
