@@ -2,6 +2,10 @@ package com.example.projectmanagement.entities;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
+import jakarta.validation.constraints.Email;
+import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.Size;
+
 import java.util.List;
 
 @Entity
@@ -10,9 +14,18 @@ public class Employee {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
+
+    @NotNull
+    @Size(min=1, max=50)
     private String firstName;
+    @NotNull
+    @Size(min=1, max=50)
     private String lastName;
+    @NotNull
+    @Email
+    @Column(unique = true)
     private String email;
+
 
     @ManyToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     @JoinTable(name = "project_employee",
