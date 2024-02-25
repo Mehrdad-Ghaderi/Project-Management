@@ -14,7 +14,6 @@ public class Employee {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
-
     @NotNull
     @Size(min=1, max=50)
     private String firstName;
