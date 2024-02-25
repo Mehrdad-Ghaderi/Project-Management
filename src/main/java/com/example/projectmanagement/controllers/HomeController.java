@@ -32,7 +32,7 @@ public class HomeController {
     public String displayHome(Model model) throws JsonProcessingException {
         model.addAttribute("versionNumber", ver);
 
-        List<Project> projectList = projectService.getAll();
+        List<Project> projectList = projectService.findAll();
         model.addAttribute("projectList", projectList);
 
         //The second Type is Object because we want it to be generic
