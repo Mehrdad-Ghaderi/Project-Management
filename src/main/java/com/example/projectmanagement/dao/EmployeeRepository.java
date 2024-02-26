@@ -4,9 +4,11 @@ import com.example.projectmanagement.dto.EmployeeProject;
 import com.example.projectmanagement.entities.Employee;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
+import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 
 import java.util.List;
 
+//@RepositoryRestResource(collectionResourceRel = "apiemployees", path = "")
 public interface EmployeeRepository extends CrudRepository<Employee, Long> {
 
     public List<Employee> findAll();
