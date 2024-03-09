@@ -18,8 +18,6 @@ import java.util.List;
 public class ProjectController {
     @Autowired
     ProjectRepository projectRepository;
-
-
     @Autowired
     EmployeeService employeeService;
 
